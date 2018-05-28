@@ -11,7 +11,8 @@
 \author{Celina Ma, John Ngo, Omar Qureshi}
 \begin{document}
 \maketitle
-
+\def\textfraction{.01}
+\def\topfraction{.99}
 \section*{Deliverable \#1}
 
 Generally, the software development model is chosen in response to the circumstances of the software’s development. Our client is a real-world client – Professor Jason Donev, who is an individual and understandably has a busy schedule. He can meet up with us around once a week, but it would be difficult and unreasonable to remain in constant communication. There are difficulties for us as well as students going to classes on a set schedule, thus any method which requires constant client input and interaction on every aspect of development appears unsuitable. This difficulty eliminates the Scrum model, due to it being an agile model which requires such constant communication.
@@ -51,7 +52,7 @@ While a live reading is displayed, the 'get reading' button takes a snapshot of 
 \vskip 6mm
 4. "The app must be able to record the averaged  'get readings' in a table." 
 
-Upon pressing the 'get reading' button, the value is averaged and stored into a table that is accessible in another part/menu of the application.
+After pressing the 'get reading' button, the value is averaged and stored into a table that is accessible in another part/menu of the application.
 
 \vskip 6mm
 5. "The app and all of its relevant code must be open source to further future academic endeavours."
@@ -63,25 +64,25 @@ The client has specified that the code must be accessible to the public. This wo
 
 1. "The app should present the readings with two significant digits."
 
-This allows the user to experience a non cluttered UI, removing unnecessary information This NFR would fall under the usability. 
+This allows the user to experience a non cluttered UI, removing unnecessary information. This NFR would fall under the usability. 
 
-\vskip 6mm
+\vskip 4mm
 
 2. "The app should record the readings by making a smooth visual animation."
 
-A transition animation is often desired to express the information in a clearer way. This NFR would fall under the usability category. 
+A transition animation is often desired to express user action in a clearer way. This NFR would fall under the usability category. 
 
-\vskip 6mm
+\vskip 4mm
 
 3. "The app should record the readings within 0.5s after pressing the 'get reading' button."
 
-This ensures the user doesn't have to wait an unusually long amount of time to get the reading. It also stops the user from getting frustrated and pressing the button again needlessly. This NFR would fall under the response time category. 
-\vskip 6mm
+This ensures the user doesn't have to wait an unusually large amount of time to get the reading. It also stops the user from getting frustrated and pressing the button again needlessly. This NFR would fall under the response time category. 
+\vskip 4mm
 4. "The app should emit a feedback sound when the user presses the ‘get reading button’" 
 
 Giving the user direct confirmation of their action being applied is helpful and again stops user from pressing the button unnecessarily. This NFR would fall under the usability category.
 
-\vskip 6mm
+\vskip 4mm
 5. "The app should present a message if the muon detector is connected or not."
 
 This makes sure that a precondition of using the app is met, which is having the miniUSB cable plugged into the phone and detector. This NFR would fall under the learnability/usability category. 
@@ -91,13 +92,22 @@ This makes sure that a precondition of using the app is met, which is having the
 
 \section*{Deliverable \#3}
 
-\subsection*{3-1: Choosing User Stories/Map}
+\subsection*{3-1: Choosing User Stories Vs Use Cases}
 
-The reason why we chose user stories over use cases is...
+After considering both use cases and user stories, we conclude that the user stories method is a better way to represent the systems requirements for our project. Just as with the selection of our software process model, this comes from consideration of our circumstances compared to the strengths and weaknesses of each model.
+
+The largest, most important draw of the user stories model is that it is extremely simple and to the point. Its structure, where a given user wants to do something for a given reason, is very, very close to how our client expresses what he wants out of the software, and as such is extremely attractive. Along with the emphasis on action and reason, user stories allow for the communication of overarching requirements goals as opposed to more nitty-gritty details, which fits with the iterative model of development we have chosen, since iterative models work towards a general end goal but don’t care about details at each stage.
+
+The largest, most important draw of the use cases model is that done correctly, it can map out the structure of the very application needed, at least on some level. However, this backbone given and its greater emphasis on specific details compared to user stories does not lend it quite as well to an iterative model; and furthermore, it is more technically designed than user stories, which are closer to natural language. As such, while not a terrible alternative, it just doesn’t provide nearly as many advantages as with user stories.
+
+Therefore, we have selected user stories to represent our system requirements.
+
 
 \subsection*{3-2: User Stories}
 
 The three core functional requirements that the user (in our case Professor Donev) needs to accomplish are as follows: connect muon detector to phone, view muon detector data and save data from muon detector to a log. As such, three corresponding story cards are created; 
+
+\newpage
 
 
 \begin{figure}[h]
@@ -117,8 +127,8 @@ With the use of the user story cards above, a collage/story map can be created t
 \begin{landscape}
 \begin{figure}[h]
   \centering
-  
-      \includegraphics[width=1.6\textwidth]{storymap.png}
+  \vspace*{-2cm} \hspace*{-0.5cm}
+      \includegraphics[width=2.0\textwidth]{storymap.png}
       \caption{A story map is used to organize requirements in order of priority and to illustrate how user interacts with app}
   
 \end{figure}
@@ -134,49 +144,62 @@ With the use of the user story cards above, a collage/story map can be created t
 \end{figure}
 
 \newpage
-\subsection*{4-2: Elaborating Sketches}
+\subsubsection*{Why We Chose Sketch A}
 
+We chose sketch A to elaborate on due to its clarity and emphasis on the most important aspects of this screen. The main buttons the user would interact with (Record, Mode and Data Log) are large and displayed clearly. Compared to sketches B and C, which have smaller icons that the user may accidentally mis-press, the interface of A is more focused on what is important to the user. This is key to enhancing the intuitiveness of the app. Sketch D emphasizes similar points to sketch A, but the mode selection button is somewhat less obvious in this design. Although sketch E shows more information about Previous Readings than the other sketches, it is too cluttered; additionally, that information is repeated in the Data Log screen in more detail, so it is not needed for the Data Collection screen. Thus, our main reason for choosing sketch A was its relative simplicity and correctly emphasized functions compared to the other designs.
+
+\subsection*{4-2: Elaborating Sketches}
+\def\textfraction{.01}
+\def\topfraction{.99}
 \bigskip
-\begin{figure}[h]
+\begin{figure}[b!]
   \centering
-      \includegraphics[width=1.2\textwidth]{elaboratingsketches.png}
+  \hspace*{-1cm}
+  \renewcommand{\textfraction}{0.05} 
+      \includegraphics[width=0.84\textwidth]{elaboratingsketches.png}
   \caption{Extended sketches for other parts of the apps UI screens}
 \end{figure}
+
 \newpage
 \subsection*{4-3: Storyboard Sketches}
 
 \bigskip
 \begin{figure}[h]
   \centering
-      \includegraphics[width=0.98\textwidth]{storyboard.png}
+  \hspace*{-0.5cm}
+      \includegraphics[width=1.15\textwidth]{storyboard.png}
   \caption{The recording screen responding to user input}
 \end{figure}
-\subsection*{4-3: Wizard of Oz Demo Video}
-\subsection*{4-4: Requirements Change}
+
+\newpage
+\subsection*{4-4: Wizard of Oz Demo Video}
+\subsection*{4-5: Requirements Change}
+
+\newpage
 \section*{Deliverable \#5}
 
-Our project first began with John consulting us about a program an external client, Dr. Donev,  might need. We agreed and this led to John emailing Dr. Donev  for confirming the project. The following emails show the first steps in the project; 
+Our project first began with John consulting us about a program an external client, Dr. Donev, might need. We agreed and this led to John emailing Dr. Donev to confirm the project. The following emails show the first steps in the project; 
 \bigskip
 \begin{figure}[h]
   \centering
-      \includegraphics[width=0.8\textwidth]{1.png}
+      \includegraphics[width=1.1\textwidth]{1.png}
   \caption{Initial exchange of emails to get the project started}
 \end{figure}
 
 \newpage
-Once the project was confirmed, Dr. Donev and John chatted briefly on the phone to go over some project specifications very briefly. John told us a little about the app requirements such as it needing to communicate with an external piece of hardware. After some discussions of our own, we then met with Dr. Donev as a group after confirming a time;
+Once the project was confirmed, Dr. Donev and John chatted on the phone to go over some project specifications very briefly. John told us a little about the app requirements such as it needing to communicate with an external piece of hardware. After some discussions of our own, we then met with Dr. Donev as a group after confirming a time;
 
 
 \bigskip
 \begin{figure}[h]
   \centering
-      \includegraphics[width=0.8\textwidth]{3.png}
+      \includegraphics[width=1.1\textwidth]{3.png}
 
   \caption{Setting up a stand up meeting with Dr. Donev as a group}
 \end{figure}
 
 
-During this meeting we focused solely on requirements and what was the applications intended purpose. Some of the major requirements that were deduced were displaying a reading of the muons and being able to record that reading for data processing.
+During this stand up meeting, we focused solely on requirements and what was the applications intended purpose. Some of the major requirements that were deduced were displaying a reading of the muons and being able to record that reading for data processing.
 
 Approximately two weeks after the initial consult, we met with Dr. Donev again with a low fidelity prototype. This was the meeting where we recorded our Wizard of Oz style demo. 
 

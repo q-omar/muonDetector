@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  26 MAY 2018 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 MAY 2018 21:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -238,84 +238,101 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<storycard1.png, id=16, 474.77374pt x 253.94875pt>
+ [4]
+<storycard1.png, id=19, 472.76625pt x 241.90375pt>
 File: storycard1.png Graphic file (type png)
 <use storycard1.png>
-Package pdftex.def Info: storycard1.png  used on input line 106.
-(pdftex.def)             Requested size: 251.9989pt x 134.78981pt.
- [4 <./storycard1.png>]
-<storymap.png, id=22, 1717.41624pt x 1322.9425pt>
+Package pdftex.def Info: storycard1.png  used on input line 116.
+(pdftex.def)             Requested size: 251.9989pt x 128.9429pt.
+ [5 <./storycard1.png>]
+<storymap.png, id=25, 1702.36pt x 1098.1025pt>
 File: storymap.png Graphic file (type png)
 <use storymap.png>
-Package pdftex.def Info: storymap.png  used on input line 121.
-(pdftex.def)             Requested size: 576.0022pt x 443.6982pt.
+Package pdftex.def Info: storymap.png  used on input line 131.
+(pdftex.def)             Requested size: 720.0pt x 464.43375pt.
+
+Overfull \hbox (112.40671pt too wide) in paragraph at lines 130--132
+ []|  [] 
+ []
 
 
-LaTeX Warning: Float too large for page by 109.42737pt on input line 124.
+LaTeX Warning: Float too large for page by 73.25742pt on input line 134.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <./storymap.png>]
-<overviewsketches.png, id=27, 989.6975pt x 1069.9975pt>
+[6 <./storymap.png>]
+<overviewsketches.png, id=30, 1650.165pt x 1782.66pt>
 File: overviewsketches.png Graphic file (type png)
 <use overviewsketches.png>
-Package pdftex.def Info: overviewsketches.png  used on input line 132.
-(pdftex.def)             Requested size: 396.0022pt x 428.12202pt.
+Package pdftex.def Info: overviewsketches.png  used on input line 142.
+(pdftex.def)             Requested size: 396.0022pt x 427.79274pt.
 
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 132--133
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 142--143
  [][] 
  []
 
-[6
+[7
 
 
  <./overviewsketches.png>]
-<elaboratingsketches.png, id=32, 2216.28pt x 2160.07pt>
+<elaboratingsketches.png, id=36, 1883.035pt x 1800.7275pt>
 File: elaboratingsketches.png Graphic file (type png)
 <use elaboratingsketches.png>
-Package pdftex.def Info: elaboratingsketches.png  used on input line 142.
-(pdftex.def)             Requested size: 431.9989pt x 421.03069pt.
+Package pdftex.def Info: elaboratingsketches.png  used on input line 159.
+(pdftex.def)             Requested size: 302.39868pt x 289.16641pt.
+ [8 <./elaboratingsketches.png>]
+<storyboard.png, id=42, 979.66pt x 1209.51875pt>
+File: storyboard.png Graphic file (type png)
+<use storyboard.png>
+Package pdftex.def Info: storyboard.png  used on input line 170.
+(pdftex.def)             Requested size: 413.9978pt x 511.1319pt.
 
-Overfull \hbox (71.9989pt too wide) in paragraph at lines 142--143
+Overfull \hbox (42.20477pt too wide) in paragraph at lines 169--171
+ []|  [] 
+ []
+
+[9 <./storyboard.png>] [10]
+<1.png, id=50, 808.52063pt x 538.51187pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 185.
+(pdftex.def)             Requested size: 396.0022pt x 263.75807pt.
+
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-[7 <./elaboratingsketches.png>]
-<storyboard.png, id=38, 979.66pt x 1209.51875pt>
-File: storyboard.png Graphic file (type png)
-<use storyboard.png>
-Package pdftex.def Info: storyboard.png  used on input line 151.
-(pdftex.def)             Requested size: 352.79846pt x 435.57407pt.
-<1.png, id=39, 808.52063pt x 538.51187pt>
-File: 1.png Graphic file (type png)
-<use 1.png>
-Package pdftex.def Info: 1.png  used on input line 162.
-(pdftex.def)             Requested size: 288.0011pt x 191.8263pt.
- [8 <./storyboard.png>] [9 <./1.png>]
-<3.png, id=48, 806.01125pt x 492.84125pt>
+[11 <./1.png>]
+<3.png, id=55, 806.01125pt x 492.84125pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 173.
-(pdftex.def)             Requested size: 288.0011pt x 176.09915pt.
- [10 <./3.png>] (./assignment1.aux) ) 
+Package pdftex.def Info: 3.png  used on input line 196.
+(pdftex.def)             Requested size: 396.0022pt x 242.14105pt.
+
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 196--197
+ [][] 
+ []
+
+[12 <./3.png>] (./assignment1.aux) ) 
 Here is how much of TeX's memory you used:
- 2488 strings out of 492649
- 33814 string characters out of 6129622
+ 2490 strings out of 492649
+ 33838 string characters out of 6129622
  97985 words of memory out of 5000000
- 6319 multiletter control sequences out of 15000+600000
- 9796 words of font info for 37 fonts, out of 8000000 for 9000
+ 6320 multiletter control sequences out of 15000+600000
+ 10104 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,25p,712b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr17.pfb>
-Output written on assignment1.pdf (10 pages, 1248044 bytes).
+ 41i,6n,25p,959b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb>
+Output written on assignment1.pdf (12 pages, 1429151 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
