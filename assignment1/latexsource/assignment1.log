@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 MAY 2018 21:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  29 MAY 2018 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -239,36 +239,46 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-<storycard1.png, id=19, 472.76625pt x 241.90375pt>
+<storycard1.png, id=19, 344.28625pt x 174.6525pt>
 File: storycard1.png Graphic file (type png)
 <use storycard1.png>
 Package pdftex.def Info: storycard1.png  used on input line 116.
-(pdftex.def)             Requested size: 251.9989pt x 128.9429pt.
- [5 <./storycard1.png>]
-<storymap.png, id=25, 1702.36pt x 1098.1025pt>
+(pdftex.def)             Requested size: 251.9989pt x 127.83638pt.
+<storycard2.png, id=21, 344.28625pt x 173.64874pt>
+File: storycard2.png Graphic file (type png)
+<use storycard2.png>
+Package pdftex.def Info: storycard2.png  used on input line 123.
+(pdftex.def)             Requested size: 251.9989pt x 127.10168pt.
+<storycard3.png, id=22, 353.32pt x 181.67876pt>
+File: storycard3.png Graphic file (type png)
+<use storycard3.png>
+Package pdftex.def Info: storycard3.png  used on input line 131.
+(pdftex.def)             Requested size: 251.9989pt x 129.5805pt.
+ [5 <./storycard1.png> <./storycard2.png> <./storycard3.png>]
+<storymap.png, id=29, 1245.65375pt x 868.24374pt>
 File: storymap.png Graphic file (type png)
 <use storymap.png>
-Package pdftex.def Info: storymap.png  used on input line 131.
-(pdftex.def)             Requested size: 720.0pt x 464.43375pt.
+Package pdftex.def Info: storymap.png  used on input line 146.
+(pdftex.def)             Requested size: 720.0pt x 501.85944pt.
 
-Overfull \hbox (112.40671pt too wide) in paragraph at lines 130--132
+Overfull \hbox (112.40671pt too wide) in paragraph at lines 145--147
  []|  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 73.25742pt on input line 134.
+LaTeX Warning: Float too large for page by 110.6831pt on input line 149.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6 <./storymap.png>]
-<overviewsketches.png, id=30, 1650.165pt x 1782.66pt>
+<overviewsketches.png, id=34, 1650.165pt x 1782.66pt>
 File: overviewsketches.png Graphic file (type png)
 <use overviewsketches.png>
-Package pdftex.def Info: overviewsketches.png  used on input line 142.
+Package pdftex.def Info: overviewsketches.png  used on input line 157.
 (pdftex.def)             Requested size: 396.0022pt x 427.79274pt.
 
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 142--143
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 157--158
  [][] 
  []
 
@@ -276,50 +286,50 @@ Overfull \hbox (36.0022pt too wide) in paragraph at lines 142--143
 
 
  <./overviewsketches.png>]
-<elaboratingsketches.png, id=36, 1883.035pt x 1800.7275pt>
+<elaboratingsketches.png, id=40, 1883.035pt x 1800.7275pt>
 File: elaboratingsketches.png Graphic file (type png)
 <use elaboratingsketches.png>
-Package pdftex.def Info: elaboratingsketches.png  used on input line 159.
+Package pdftex.def Info: elaboratingsketches.png  used on input line 174.
 (pdftex.def)             Requested size: 302.39868pt x 289.16641pt.
  [8 <./elaboratingsketches.png>]
-<storyboard.png, id=42, 979.66pt x 1209.51875pt>
+<storyboard.png, id=46, 979.66pt x 1209.51875pt>
 File: storyboard.png Graphic file (type png)
 <use storyboard.png>
-Package pdftex.def Info: storyboard.png  used on input line 170.
+Package pdftex.def Info: storyboard.png  used on input line 185.
 (pdftex.def)             Requested size: 413.9978pt x 511.1319pt.
 
-Overfull \hbox (42.20477pt too wide) in paragraph at lines 169--171
+Overfull \hbox (42.20477pt too wide) in paragraph at lines 184--186
  []|  [] 
  []
 
 [9 <./storyboard.png>] [10]
-<1.png, id=50, 808.52063pt x 538.51187pt>
+<1.png, id=54, 808.52063pt x 538.51187pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 185.
+Package pdftex.def Info: 1.png  used on input line 212.
 (pdftex.def)             Requested size: 396.0022pt x 263.75807pt.
 
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 185--186
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 212--213
  [][] 
  []
 
 [11 <./1.png>]
-<3.png, id=55, 806.01125pt x 492.84125pt>
+<3.png, id=59, 806.01125pt x 492.84125pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 196.
+Package pdftex.def Info: 3.png  used on input line 223.
 (pdftex.def)             Requested size: 396.0022pt x 242.14105pt.
 
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 196--197
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 223--224
  [][] 
  []
 
 [12 <./3.png>] (./assignment1.aux) ) 
 Here is how much of TeX's memory you used:
- 2490 strings out of 492649
- 33838 string characters out of 6129622
+ 2500 strings out of 492649
+ 34016 string characters out of 6129622
  97985 words of memory out of 5000000
- 6320 multiletter control sequences out of 15000+600000
+ 6328 multiletter control sequences out of 15000+600000
  10104 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,6n,25p,959b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -329,10 +339,10 @@ pe1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmr17.pfb>
-Output written on assignment1.pdf (12 pages, 1429151 bytes).
+Output written on assignment1.pdf (12 pages, 1539070 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
+ 82 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -55,9 +55,9 @@ While a live reading is displayed, the 'get reading' button takes a snapshot of 
 After pressing the 'get reading' button, the value is averaged and stored into a table that is accessible in another part/menu of the application.
 
 \vskip 6mm
-5. "The app and all of its relevant code must be open source to further future academic endeavours."
+5. "The app must be able to export out the saved data to a computer so that further data interpretation and processing can be performed."
 
-The client has specified that the code must be accessible to the public. This would progress the learning experiences of future students who want to extend on the work (ie make an iOS version).  
+The client has specified that the readings once in tabled format must be able to export (via .csv for example) to another computer. This would progress the learning experiences of future students who want to work with the data more comfortably once it has been collected via the phone.  
 
 
 \subsection*{2-2: Non Functional Requirements (NFRs)}
@@ -114,6 +114,21 @@ The three core functional requirements that the user (in our case Professor Done
   \centering
   
       \includegraphics[width=0.7\textwidth]{storycard1.png}
+  
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  
+      \includegraphics[width=0.7\textwidth]{storycard2.png}
+     
+  
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  
+      \includegraphics[width=0.7\textwidth]{storycard3.png}
       \caption{Individual story cards are first created to document core requirements, upon which further cards will be used to document how a user goes about accomplishing those tasks}
   
 \end{figure}
@@ -121,7 +136,7 @@ The three core functional requirements that the user (in our case Professor Done
 
 \subsection*{3-3: Story Map}
 
-With the use of the user story cards above, a collage/story map can be created that details further on how a user can interact with the app to accomplish their requirements. The story map can be viewed on the next landscape page. 
+With the use of the user story cards above, a collage/story map can be created that details further on how a user can interact with the app to accomplish their requirements. The story map can be viewed on the next landscape page;
 
 \newpage
 \begin{landscape}
@@ -173,7 +188,19 @@ We chose sketch A to elaborate on due to its clarity and emphasis on the most im
 
 \newpage
 \subsection*{4-4: Wizard of Oz Demo Video}
+
+Demo videos can be viewed at the following links:
+
+
 \subsection*{4-5: Requirements Change}
+
+When generating overview sketches for part 4-1, we had to consider what aspects of the Data Collection screen were most important for satisfying our initial requirements. All the sketches have similarities, such as having the live reading be the focus of the screen (FR \#2). However, they emphasized some different points, and we had to choose which design seemed most intuitive to use. For example, we considered if a settings button allowing the user to turn feedback sounds on/off (NFR \#4) was necessary on this screen, or if it was better suited for the main menu. As for the elaborating sketches, they were mainly based on our functional requirements (FR \#1 Collection Prompt; FR \#4 Data Log).  Deciding how the reading screen should be connected to other parts of the app was helpful for planning user navigation.
+
+When storyboarding, we again focused on improving usability of the app. Along with playing a sound when the user presses the "get reading" button (NFR \#4), we added visual cues to indicate a successful recording. In this case, we changed the colour of the button and placed a checkmark symbol on the Data Log. So, the storyboarding process was helpful for generating more visual feedback to the user. This step was also useful for estimating how convenient it is to perform a key task in our interface (recording a value to the log).
+
+The most helpful prototyping technique for adjusting our requirements was the Wizard of Oz video. Allowing Dr. Donev to directly interact with our paper prototype resulted in a great amount of feedback. We realized the discrepancies between our current design and what our client considered important. For example, we emphasized a constant, live stream of data (FR \#2), but Dr. Donev explained that we should only begin displaying data after pressing the record button. Rather than averaging readings (FR \#3), the application should function more like a counter over some time interval. He also introduced other requirements that we had not thought about before, like having the user indicate if they are indoors or outdoors when taking measurements. By discussing requirements and revising them with our client, we gained a much clearer image of how our application should work.
+
+
 
 \newpage
 \section*{Deliverable \#5}
