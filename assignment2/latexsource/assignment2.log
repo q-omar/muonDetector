@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  8 JUN 2018 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 JUN 2018 00:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -334,34 +334,153 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 74.
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<silentimg1.png, id=15, 4047.12pt x 3035.34pt>
+File: silentimg1.png Graphic file (type png)
+<use silentimg1.png>
+Package pdftex.def Info: silentimg1.png  used on input line 52.
+(pdftex.def)             Requested size: 323.9978pt x 242.9711pt.
+ [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
 
-[6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 74.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.56 \newpage
+              <./silentimg1.png>]
+<silentimg2.png, id=28, 4047.12pt x 3035.34pt>
+File: silentimg2.png Graphic file (type png)
+<use silentimg2.png>
+Package pdftex.def Info: silentimg2.png  used on input line 62.
+(pdftex.def)             Requested size: 180.0pt x 134.96336pt.
+<silentimg3.png, id=29, 4047.12pt x 3035.34pt>
+File: silentimg3.png Graphic file (type png)
+<use silentimg3.png>
+Package pdftex.def Info: silentimg3.png  used on input line 72.
+(pdftex.def)             Requested size: 180.0pt x 134.96336pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.79 \newpage
+             pdfTeX warning (ext4): destination with the same identifier (name{
+figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.79 \newpage
+              <./silentimg2.png> <./silentimg3.png>]
+<table1.png, id=36, 1892.06876pt x 533.995pt>
+File: table1.png Graphic file (type png)
+<use table1.png>
+Package pdftex.def Info: table1.png  used on input line 86.
+(pdftex.def)             Requested size: 360.0pt x 101.59862pt.
+<USBMtable3.png, id=37, 951.555pt x 825.0825pt>
+File: USBMtable3.png Graphic file (type png)
+<use USBMtable3.png>
+Package pdftex.def Info: USBMtable3.png  used on input line 93.
+(pdftex.def)             Requested size: 360.0pt x 312.14973pt.
+ [4 <./table1.png> <./USBMtable3.png>]
+<dataproctable2.png, id=46, 952.55875pt x 1245.65375pt>
+File: dataproctable2.png Graphic file (type png)
+<use dataproctable2.png>
+Package pdftex.def Info: dataproctable2.png  used on input line 101.
+(pdftex.def)             Requested size: 360.0pt x 470.76837pt.
+ [5 <./dataproctable2.png>]
+<displaytable4.png, id=52, 946.53625pt x 1208.515pt>
+File: displaytable4.png Graphic file (type png)
+<use displaytable4.png>
+Package pdftex.def Info: displaytable4.png  used on input line 109.
+(pdftex.def)             Requested size: 360.0pt x 459.62772pt.
+ [6 <./displaytable4.png>]
+Overfull \hbox (1.30574pt too wide) in paragraph at lines 121--122
+[]\OT1/cmr/bx/n/10.95 Justification: \OT1/cmr/m/n/10.95 Our project can best be
+ de-scribed as a semi-detached project.
+ []
+
+<cocoimg1.png, id=58, 956.57375pt x 1054.94125pt>
+File: cocoimg1.png Graphic file (type png)
+<use cocoimg1.png>
+Package pdftex.def Info: cocoimg1.png  used on input line 127.
+(pdftex.def)             Requested size: 306.0022pt x 337.45932pt.
+[7 <./cocoimg1.png>] [8] [9]
+<codeimg1.png, id=90, 629.35126pt x 1211.52625pt>
+File: codeimg1.png Graphic file (type png)
+<use codeimg1.png>
+Package pdftex.def Info: codeimg1.png  used on input line 178.
+(pdftex.def)             Requested size: 226.80176pt x 436.59279pt.
+<codeimg2.png, id=91, 498.86375pt x 483.8075pt>
+File: codeimg2.png Graphic file (type png)
+<use codeimg2.png>
+Package pdftex.def Info: codeimg2.png  used on input line 184.
+(pdftex.def)             Requested size: 226.80176pt x 219.95558pt.
+ [10 <./codeimg1.png>]
+<codeimg3.png, id=99, 546.04pt x 378.41376pt>
+File: codeimg3.png Graphic file (type png)
+<use codeimg3.png>
+Package pdftex.def Info: codeimg3.png  used on input line 190.
+(pdftex.def)             Requested size: 298.80066pt x 207.07153pt.
+ [11 <./codeimg2.png> <./codeimg3.png>]
+<codeimg4.png, id=106, 713.66624pt x 1013.7875pt>
+File: codeimg4.png Graphic file (type png)
+<use codeimg4.png>
+Package pdftex.def Info: codeimg4.png  used on input line 205.
+(pdftex.def)             Requested size: 284.39758pt x 403.99185pt.
+ [12 <./codeimg4.png>]
+<codeimg5.png, id=113, 654.445pt x 786.94pt>
+File: codeimg5.png Graphic file (type png)
+<use codeimg5.png>
+Package pdftex.def Info: codeimg5.png  used on input line 211.
+(pdftex.def)             Requested size: 360.0pt x 432.87837pt.
+ [13 <./codeimg5.png>]
+<codeimg6.png, id=120, 914.41624pt x 1194.4625pt>
+File: codeimg6.png Graphic file (type png)
+<use codeimg6.png>
+Package pdftex.def Info: codeimg6.png  used on input line 219.
+(pdftex.def)             Requested size: 396.0022pt x 517.2723pt.
+
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 219--220
+[][] 
+ []
+
+[14 <./codeimg6.png>]
+<codeimg7.png, id=126, 395.4775pt x 347.2975pt>
+File: codeimg7.png Graphic file (type png)
+<use codeimg7.png>
+Package pdftex.def Info: codeimg7.png  used on input line 227.
+(pdftex.def)             Requested size: 251.9989pt x 221.29985pt.
+ [15 <./codeimg7.png>] [16] [17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 261.
+ [18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 261.
  (./assignment2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 74.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 74.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 261.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 261.
 Package rerunfilecheck Info: File `assignment2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 261.
  ) 
 Here is how much of TeX's memory you used:
- 5990 strings out of 492649
- 86572 string characters out of 6129622
- 174442 words of memory out of 5000000
- 9785 multiletter control sequences out of 15000+600000
- 10103 words of font info for 38 fonts, out of 8000000 for 9000
+ 6108 strings out of 492649
+ 88212 string characters out of 6129622
+ 178442 words of memory out of 5000000
+ 9854 multiletter control sequences out of 15000+600000
+ 12005 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,6n,25p,249b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on assignment2.pdf (6 pages, 40027 bytes).
+ 32i,6n,25p,742b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on assignment2.pdf (18 pages, 2340347 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 27 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
