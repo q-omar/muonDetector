@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/aboutTextID"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/figureTextID"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="textMultiLine"
+        android:text="This app was created by Celina Ma, John Ngo and Omar Qureshi under the guidance of Zahra Shakeri Abad and Dr. Jason Donev. \n\nThe app uses an Android phone to supply power to a previously built Muon Detector, following specifications by MIT: Cosmic Watch. The app is also able to communicate with it to output its muon event data to a phone UI."
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        android:typeface="monospace" />
+
+    <ImageView
+        android:id="@+id/testImageID"
+        android:layout_width="259dp"
+        android:layout_height="175dp"
+        android:layout_above="@+id/figureTextID"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/test" />
+
+    <TextView
+        android:id="@+id/figureTextID"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Custom made Muon Detector"
+        android:textColor="@android:color/background_light"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>
