@@ -63,7 +63,6 @@ public class RecorderScreen extends AppCompatActivity {
     public void startStop(){
         if (timerIsRunning){
             stopTimer();
-
         } else {
             startTimer();
         }
@@ -88,6 +87,7 @@ public class RecorderScreen extends AppCompatActivity {
 
 
     public void startTimer(){
+        clearButton.setText("Summary");
         processor.clearEvents();
         processor.switchRecording();
         eventText.setVisibility(View.INVISIBLE);
@@ -105,7 +105,7 @@ public class RecorderScreen extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-
+                startStop();
             }
         }.start();
         countDownButton.setText("Recording...");
@@ -134,14 +134,14 @@ public class RecorderScreen extends AppCompatActivity {
 
 
     public void clearScreen(){
-        if (processor.getEventsPerMin()==0){
+        if (processor.getEventCount()==0){
             summaryText.setVisibility(View.INVISIBLE);
             durationText.setVisibility(View.INVISIBLE);
             averageText.setVisibility(View.INVISIBLE);
             dateText.setVisibility(View.INVISIBLE);
             eventText.setVisibility(View.INVISIBLE);
             clearButton.setText("Summary");
-        } else{
+        } else if (!timerIsRunning){
 
             String averageString = Double.toString(processor.getEventsPerMin());
             processor.clearEvents();

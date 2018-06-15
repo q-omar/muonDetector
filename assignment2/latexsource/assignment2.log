@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 JUN 2018 08:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 JUN 2018 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,22 +449,54 @@ File: codeimg7.png Graphic file (type png)
 <use codeimg7.png>
 Package pdftex.def Info: codeimg7.png  used on input line 227.
 (pdftex.def)             Requested size: 251.9989pt x 221.29985pt.
- [15 <./codeimg7.png>] [16] [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
- [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
+ [15 <./codeimg7.png>] [16]
+<sequence1.png, id=143, 1060.96375pt x 552.0625pt>
+File: sequence1.png Graphic file (type png)
+<use sequence1.png>
+Package pdftex.def Info: sequence1.png  used on input line 257.
+(pdftex.def)             Requested size: 396.0022pt x 206.05418pt.
+
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 257--258
+ [][] 
+ []
+
+[17 <./sequence1.png>] [18]
+<email1.png, id=157, 847.165pt x 660.4675pt>
+File: email1.png Graphic file (type png)
+<use email1.png>
+Package pdftex.def Info: email1.png  used on input line 278.
+(pdftex.def)             Requested size: 396.0022pt x 308.72667pt.
+
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 278--279
+ [][] 
+ []
+
+<email2.png, id=158, 971.63pt x 299.1175pt>
+File: email2.png Graphic file (type png)
+<use email2.png>
+Package pdftex.def Info: email2.png  used on input line 284.
+(pdftex.def)             Requested size: 431.9989pt x 132.99048pt.
+
+Overfull \hbox (71.9989pt too wide) in paragraph at lines 284--285
+ [][] 
+ []
+
+[19 <./email1.png> <./email2.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
  (./assignment2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
 Package rerunfilecheck Info: File `assignment2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
- 6108 strings out of 492649
- 88212 string characters out of 6129622
+ 6125 strings out of 492649
+ 88448 string characters out of 6129622
  178442 words of memory out of 5000000
- 9854 multiletter control sequences out of 15000+600000
+ 9866 multiletter control sequences out of 15000+600000
  12005 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,6n,25p,742b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -477,10 +509,10 @@ sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on assignment2.pdf (18 pages, 7385650 bytes).
+Output written on assignment2.pdf (20 pages, 2087915 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 58 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 60 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

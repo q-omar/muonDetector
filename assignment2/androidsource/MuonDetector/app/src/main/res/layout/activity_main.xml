@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/aboutButton"
-        android:layout_width="146dp"
+        android:layout_width="147dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"

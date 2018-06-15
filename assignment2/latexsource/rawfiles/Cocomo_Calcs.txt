@@ -1,0 +1,41 @@
+Project type: Semi-Detached (a = 3.0, b = 1.12)
+	Justification: 
+		Our project can best be described as a semi-detached project. While part of our project involves data processing and data retrieval, the other half is hardware based in that it depends on communication through USB with a scientific instrument. The overall project is ambitious for our team, since we have fairly little experience with much of the components of the project, incl. Android programming and USB interaction. The app is being developed by a small team, and ultimately aims to have real-time display of detection events as fed through by the USB link. As such, straddling the lines of organic and embedded as it is, it stands to reason that the project is semi-detached.
+
+Cocomo Factors:
+	1. Analyst Capacity: Low (Beginning Students) 													1.19
+	2. Applications Experience: Very Low (<=4 Months) 												1.29
+	3. Application of SENG/Programming Practices:  Nominal (Doing the assignment)					1.0
+	4. Complexity of the Project: High (Event based programming; weakest estimate) 					1.15
+	4. Computational Operations: Nominal. 															1.0
+	4. Device Dependent Operations: High (or Nominal)												1.0
+	4. Data Management Operations: Nominal		 													1.0
+	5. Memory Constraints: Nominal. 																1.0
+	6. Programming Language Experience: Low (<4 Months) (Factoring in how short CPSC 233 was). 		1.07
+	7. Required Turnabout Time: Low. 																0.87 (?)
+	8. Required Software Reliability: Nominal or Low 												1.0
+	9. Required Development Schedule/Schedule Constraint: High?? (Rushed semester)					1.04
+	10. Runtime Performance Contraints: Nominal.													1.0
+	11. Databse Size: Low (for now)																	0.94
+	12. Software Engineer Capacity: High															0.86 (?)
+	13. Use of Software Tools: High/Very High (IDE)?												0.91
+	14. Virtual Machine Experience: Low (Maybe??)													1.10
+	15. Volatility of the Virtual Machine: Very Low (Do not expect changes anytime soon).			0.87
+	
+	Total Multiplier: 1.17184642
+	
+	Justification Paragraph:
+		Of the cost driver factors, this is why each factor different from nominal is what it is:
+			1. Analyst Capacity: Our analyst capacity is low, because we are software engineering students in our first software engineering class, just beginning to apply what we've learned here. As such, we have little confidance in our own analysis capacities.
+			2. Applications Experience: We selected very low here because none of us have worked on a comparable project before. We haven't worked on android before, we haven't worked with USB input with Java before, and anything we did have experience on, such as coding and UI, was for less than 4 months since that's how long a university semester is.
+			3. We selected that the project has high complexity because of the requirement for event-based programming, some multithreading, USB hardware communications, and high level programming operators in the form of classes interacting with one another. In any case, all lower level descriptions do not fit and all higher level ones demand more than is actually involved here.
+			4. Our programming language experience with Java is low, because that's how long CPSC 233 was, when we last used Java.
+			5. The required turnabout time for processing our code is very low, due to using modern computers.
+			6. Our development schedule is high due to this being an extremely rushed semester.
+			7. Our database size needed is low, mostly because we don't need one within the current scope of the project.
+			8. Our software engineer capacity is high, because we are all fairly effective and productive coders who can organize meeting often and plan well together.
+			9. Our use of software tools is high, because almost all the features described are embedded as part of the Android Studio IDE.
+			10. Our experience with the Virtual Machine we are programming for is low; the android platform we have but do not know the deeper level coding behind it, and the detectors we are programming for are simple but also not interacted with very much before.
+			11. The volatility of the virtual machine is very low, primarily because Android is a stable operating system with backwards code comparability, and the scientific instrument we are coding for doesn't have code that will change within out current software development timeframe.	
+Calculation: a * kdloc^b * multiplier
+		= 

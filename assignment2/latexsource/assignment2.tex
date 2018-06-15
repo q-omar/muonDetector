@@ -253,7 +253,17 @@ Our demo video featuring all three functional requirements can be viewed at the 
 
 \subsection*{5-1: Sequence Diagram 1 with Explanation}
 
+\begin{figure}[h] \centering
+	\includegraphics[width=1.1\textwidth]{sequence1.png}
+\end{figure}
 
+Our first sequence diagram demonstrates the sequence of tasks where a user initiates a recording. This is done by the user first being able to interact with a RecorderScreenGUI interface, specifically a button. The button communicates with the Processor class which creates a corresponding time stamp for the start of the recording session and enters into a TimerLoop for 60 seconds. During those 60 seconds, the Processor communicates with the USBDeviceInterface, which is a class used to communicate with an external piece of hardware known as a muon detector. 
+
+As the muon detector picks up events, the USBDeviceInterface calls the addEvent() method from the Processor class to increment events, which increase the private variable in the Processor class. This happens every time a muon event occurs during those 60 seconds. At the end of the TimerLoop, the RecorderScreenGUI calls the getEventsPerMin() method of the Processor class which calculates the total events that occurred divided by the total duration the recording took place by using the date time stamp difference. 
+
+All of this information is then finally presented to the user in the RecorderScreenGUI. This entire sequence of tasks demonstrates a key concept in software engineering/computer science which is a layer of abstraction with all of the subsystems working behind the scenes while the user only interacts with a friendly UI. 
+
+\newpage
 \subsection*{5-2: Sequence Diagram 2 with Explanation}
 
 \newpage
@@ -261,6 +271,28 @@ Our demo video featuring all three functional requirements can be viewed at the 
 \section*{Deliverable \#6}
 
 \subsection*{6-1: Client Meeting}
+
+We initially agreed to meet with Dr. Donev shortly after the completion of Assignment 1. However, we soon realized that we would not have much of our product complete by then, so we decided to hold the meeting later;
+
+\begin{figure}[h] \centering
+	\includegraphics[width=1.1\textwidth]{email1.png}
+\end{figure}
+
+After we made more progress with implementation, we arranged a new time;
+
+\begin{figure}[h] \centering
+	\includegraphics[width=1.2\textwidth]{email2.png}
+\end{figure}
+
+For our meeting, our app had two versions demonstrating different functional requirements that had yet to be integrated. We first showed that the app was able to connect to the muon detector via a mini-USB to mini-USB wired connection. We then showed the second version of the app, which could display fake data in a useful format to simulate what real data read from the muon detector would look like. We explained that we would combine these components to obtain one complete, functional product.
+
+Dr. Donev was pleased by our progress and provided helpful feedback on our work. We allowed him to directly interact with the app’s simple interface on an Android tablet. He commented that a setting for the app that prevents the device from going to sleep while recording data would be useful; this was a feature we had not considered until testing the app on a real device. During this session, we also discovered some bugs with the interface. At the end of our meeting, we agreed to talk again on Monday to hopefully present a more polished product. 
+
+Our greatest challenge in communicating with our customer was finding convenient times for all four of us to meet in-person. Although we spoke through email, some ideas could not be easily transferred through text alone. Due to our classes and Dr. Donev’s many obligations, we were not able to meet frequently. However, we made the most out of each meeting we had by focusing on obtaining as much feedback as possible from our client.
+
+
+
+
 
 
 
