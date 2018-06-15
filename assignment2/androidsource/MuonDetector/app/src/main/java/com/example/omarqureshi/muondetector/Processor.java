@@ -1,5 +1,8 @@
 package com.example.omarqureshi.muondetector;
 
+import android.content.Context;
+
+import java.util.Arrays;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +10,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class Processor {
+
+	private UsbDeviceInterface usb;
 
 	private Date startTime;
 	private Date stopTime;
@@ -18,19 +23,40 @@ public class Processor {
 
 	private static final int MAX_EVENTS = 1000; // might need this later
 
-	/**
+    public Processor(Context context) {
+        usb = new UsbDeviceInterface(context);
+    }
+
+    /**
+     * Attempts to connect to the detector.
+     * @return true if connection was successful, false if not
+     */
+    public boolean tryConnection() {
+        String[] connectedDevices = usb.listDevices();
+        String allDevices = Arrays.toString(connectedDevices);
+        if (connectedDevices.length > 0) {
+            usb.initializeConnection(connectedDevices[0]);
+        }
+        return usb.getFTDIConnected();
+    }
+
+    /**
 	 * Gets the number of events that have occurred since recording began.
 	 */
 	public int getEventCount() {
+	    boolean read = usb.getReading();
+	    if (read) {
+            eventCount = usb.getRawData().size();
+        }
 		return eventCount;
 	}
 
 	/**
 	 * Records a new instance of a muon event.
 	 */
-	public void addEvent() {
+	/*public void addEvent() {
 		eventCount++;
-	}
+	} */
 
 	/**
 	 * Called when the user chooses to Start/Stop Recording. Saves the appropriate timestamp
@@ -39,10 +65,12 @@ public class Processor {
 	public void switchRecording() {
 		Date timestamp = new Date();
 		if (isRecording) {
+		    getEventCount();            // Get final number of events
 			stopTime = timestamp;		// Stop recording
 		} else {
 			startTime = timestamp;		// Start recording
 			stopTime = null;
+			usb.getReading();           // Tell device to begin reading
 		}
 		isRecording = !isRecording;		// Toggle recording
 	}
@@ -101,6 +129,9 @@ public class Processor {
 	 */
 	public void clearEvents() {
 		eventCount = 0;
+		if (usb.getFTDIConnected()) {
+			usb.freshReading();
+		}
 	}
 
 }

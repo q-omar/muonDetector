@@ -1,5 +1,6 @@
 package com.example.omarqureshi.muondetector;
 
+import android.content.Context;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,17 +21,20 @@ public class RecorderScreen extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private long timeRemaining = 60000;
     private boolean timerIsRunning;
-    private Processor processor = new Processor();
+    private Processor processor;
     private TextView eventText;
     private TextView dateText;
     private TextView summaryText;
     private TextView averageText;
     private TextView durationText;
-
+    private TextView connectionText;
+    private TextView eventsMinText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        processor = new Processor(this);
         setContentView(R.layout.activity_recorder_screen);
         setTitle("Muon Event Detector");
 
@@ -40,7 +44,6 @@ public class RecorderScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startStop();
-
             }
         });
         clearButton = findViewById(R.id.clearButtonID);
@@ -56,6 +59,20 @@ public class RecorderScreen extends AppCompatActivity {
         summaryText = (TextView) findViewById(R.id.summaryLabelID);
         averageText = (TextView) findViewById(R.id.averageLabelID);
         durationText = (TextView) findViewById(R.id.durationLabelID);
+        eventsMinText = (TextView) findViewById(R.id.eventsMinID2);
+
+        boolean isConnected = processor.tryConnection();
+
+        connectionText = (TextView) findViewById(R.id.connectionLabelID);
+
+        if (isConnected) {
+            connectionText.setText("Connected");
+            connectionText.setVisibility(View.VISIBLE);
+        } else {
+            connectionText.setText("Not Connected");
+            connectionText.setVisibility(View.VISIBLE);
+        }
+
 
     }
 
@@ -69,7 +86,7 @@ public class RecorderScreen extends AppCompatActivity {
     }
 
 
-    public void generateEvent(){
+  /*  public void generateEvent(){
         Random rand = new Random();
         int randomInt = rand.nextInt(4) + 1;
         if (randomInt==1){
@@ -83,8 +100,20 @@ public class RecorderScreen extends AppCompatActivity {
            dateText.setText(fullStamp);
            dateText.setVisibility(View.VISIBLE);
         }
-    }
+    } */
 
+    public void updateScreen() {
+        String newEventString = Integer.toString(processor.getEventCount());
+
+        eventText.setText(newEventString);
+        eventText.setVisibility(View.VISIBLE);
+
+        // Update events
+        String newEventsMin = Double.toString(processor.getEventsPerMin());
+        eventsMinText.setText(newEventsMin);
+        eventsMinText.setVisibility(View.VISIBLE);
+
+    }
 
     public void startTimer(){
         clearButton.setText("Summary");
@@ -99,7 +128,9 @@ public class RecorderScreen extends AppCompatActivity {
             @Override
             public void onTick(long l ) {
                 timeRemaining = l;
-                generateEvent();
+                // generateEvent();
+
+                updateScreen();
                 updateTimer();
             }
 

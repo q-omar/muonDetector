@@ -234,7 +234,7 @@ Our demo video demonstrating the TDD approach with full implementation along wit
 
 \subsection*{3-4: Two Extra Functional Requirements}
 
-Our demo video featuring all three functional requirements can be viewed at the following (\href{https://drive.google.com/file/d/1hGAfxo0Bnyy5d5u16bPnoJyps9X3MBN_/view?usp=sharing}{\underline{link}}).
+Our demo video featuring all three functional requirements can be viewed at the following (\href{https://www.dropbox.com/s/vnuvuzx5zrtkvaa/Demo.mp4?dl=0}{\underline{link}}).
 
 
 
@@ -245,7 +245,22 @@ Our demo video featuring all three functional requirements can be viewed at the 
 
 \subsection*{4-1: Class Diagram}
 
+\begin{figure}[h] \centering \hspace*{-3cm} \vspace{3cm}
+	\includegraphics[width=1.5\textwidth]{classes.png}
+\end{figure}
+\newpage
 \subsection*{4-2: Detailed Explanation}
+
+At the top of our diagram, there are three classes extending the class AppCompatActivity. This indicates that these are the main Activities of our app, representing the screens the user can access; MainActivity, AboutScreen and RecorderScreen correspond to the Main Menu, About, and Recorder screens respectively.
+
+The Main Menu screen allows the user to access the About and Recorder screens. Thus, MainActivity has the methods openRecorderScreen and openAboutScreen. The About screen simply displays information, so it does not have relevant attributes and operations to show.
+
+RecorderScreen maintains a reference to a Processor object, which communicates between the UsbDeviceInterface and the RecorderScreen.
+
+The RecorderScreen starts a timer when the user chooses to start recording. This is conveyed to the Processor, which will save the time recording starts and initialize the UsbDeviceInterface. The UsbDeviceInterface will open a wired connection to the muon detector and store raw data from it. When this data needs to be interpreted and displayed on the RecorderScreen, the Processor will make requests to the UsbDeviceInterface and update eventCount according to the amount of raw data saved.
+
+When the recording session timer ends or when the user wishes to clear their saved data, the RecorderScreen sends another signal to Processor. The Processor will then reset its saved data and the raw data in UsbDeviceInterface as needed.
+
 
 \newpage
 
@@ -254,17 +269,27 @@ Our demo video featuring all three functional requirements can be viewed at the 
 \subsection*{5-1: Sequence Diagram 1 with Explanation}
 
 \begin{figure}[h] \centering
-	\includegraphics[width=1.1\textwidth]{sequence1.png}
+	\includegraphics[width=1.08\textwidth]{sequence1.png}
 \end{figure}
 
-Our first sequence diagram demonstrates the sequence of tasks where a user initiates a recording. This is done by the user first being able to interact with a RecorderScreenGUI interface, specifically a button. The button communicates with the Processor class which creates a corresponding time stamp for the start of the recording session and enters into a TimerLoop for 60 seconds. During those 60 seconds, the Processor communicates with the USBDeviceInterface, which is a class used to communicate with an external piece of hardware known as a muon detector. 
+Our first sequence diagram demonstrates the sequence of tasks where a user initiates a recording for 1 minute. This is done by the user first being able to interact with a RecorderScreenGUI interface, specifically a button. The button communicates with the Processor class which creates a corresponding time stamp for the start of the recording session and enters into a TimerLoop for 60 seconds. During those 60 seconds, the Processor communicates with the USBDeviceInterface, which is a class used to communicate with an external piece of hardware known as a muon detector. 
 
-As the muon detector picks up events, the USBDeviceInterface calls the addEvent() method from the Processor class to increment events, which increase the private variable in the Processor class. This happens every time a muon event occurs during those 60 seconds. At the end of the TimerLoop, the RecorderScreenGUI calls the getEventsPerMin() method of the Processor class which calculates the total events that occurred divided by the total duration the recording took place by using the date time stamp difference. 
+As the muon detector picks up events, the Processor class calls getRawData() method from the USBDeviceInterface class increment events, which increases the private variable count in the Processor class. This happens every time a muon event occurs during those 60 seconds. The RecorderScreenGUI class then updates the count displayed by calling teh getCount() method from Processor. At the end of the TimerLoop, the RecorderScreenGUI calls the getEventsPerMin() method of the Processor class which calculates the total events that occurred divided by the total duration the recording took place by using the date stamp time difference. 
 
 All of this information is then finally presented to the user in the RecorderScreenGUI. This entire sequence of tasks demonstrates a key concept in software engineering/computer science which is a layer of abstraction with all of the subsystems working behind the scenes while the user only interacts with a friendly UI. 
 
 \newpage
 \subsection*{5-2: Sequence Diagram 2 with Explanation}
+
+\begin{figure}[h] \hspace{-2cm}
+	\includegraphics[width=1.3\textwidth]{sequence2.png}
+\end{figure}
+
+
+This sequence diagram shows the use case of the user successfully connecting to the muon detector through a USB port. When the user is on the Main Menu screen (MainActivity), they will choose to open the Recorder screen. This results in an instance of RecorderScreen being created, which also creates a Processor. MainActivity is no longer needed. 
+
+Upon creation, RecorderScreen will ask the Processor to try to connect to the detector using the UsbDeviceInterface. The Processor will initialize the UsbDeviceInterface, and the UsbDeviceInterface will form the connection with the muon detector. After this connection is formed successfully, initializeConnection and tryConnection will return to the RecorderScreen. Finally, the RecorderScreen will display a message using updateScreen to show that the device is connected.
+
 
 \newpage
 
