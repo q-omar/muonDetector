@@ -1,0 +1,89 @@
+Class: USBManager
+
+
+	
+Class: Data processor:
+	Requirements: Compile information from the USB to present in a useful format for later data logging. Takes information from outside sources.
+		- Record event detections and their timestamp/locations.
+
+		
+Requirement: 
+	- 1. As a user, I'd like the app to connect with a USB scientific instrument so that we can utilize it on a mobile device.
+	- 2. As a user, I'd like the app to detect if the instrument is detected or not so that I can know if the mobile device recognizes that the correct instrument is plugged in.
+	- 3. As a user, I'd like the app to read the data coming from the USB connection so that the information can be displayed to the screen.
+	- 4. As I user, I'd like to be able to toggle on and off whether to start detecting or not, so that I can be in control of the information gathering process.
+	- 5. As a user, I'd like the app to store and process the information from the USB reading into a clear format since the data coming from the USB might not be user friendly and I want the app to be user friendly.
+			5a. I'd like the following information:
+				- Event detected.
+				- Processing relevant USB information (for debugging?)
+Shorter Names:
+	1. Connect with a scientific instrument by USB.
+	2. Verify connection for user ease.
+	3. Receive information from scientific instrument.
+	4. Control when data is being received/scientific instrument is in use.
+	5. Reprocess connected information into a user friendly format.
+	
+Tasks:
+	1. Detect if a USB device is connected or not. (Attribute: isConnected; Method: checkConnection) (Effort: 5, 20 LoC, 30min/1/2Hr)
+	2. Check: Correct USB device (optional?)  (Maybe leave to user selection?) (Attribute: deviceType, Method: detectDeviceType) (Effort: 7, 30 LoC, 1Hr) //Done by checkConnection for the model; unknown if the model will help.
+	3. Adjust USB reading parameters to fit the correct device. (Attribute: deviceType, Method: SetUSBSettings (should be automatically called), maybe more attributes relevant, Effort: 5, LoC: 50, Time: 1Hr).
+	4. Toggle on/off reading from the USB device (Attribute: isReading, Method: toggleReading) (Effort: 2, 10 LoC, 1/60 Hr) (Simple boolean)
+	5. Read from the USB/Device. (Effort: 7, 20 Loc, 1/2/3Hr)
+	6. Process USB Strings into usable information. (Attribute: deviceType Method: preProcessData, 1Hr) (Effort: 4, 100 LoC, 1/2/5 hrs)
+	7. Read and Append data from this USB device into an array. (Attribute: rawData, Method: appendRawData). (Effort: 2, 10 LoC, 1/60hr)
+	8. Code to send to a processing class the event noticed; sending the signal detection upstream somehow. (Method to be called on each detection: eventDetected). (Effort: 9, 30 LoC, 2/3/6hr)
+			--> 250 LoC average estimate; 500 LoC worst case, 150 LoC Optimstic. Effort: 20 programmer-hours (average), 12 optimstic, 50 pessemistic (library trawling, testing, designing).
+	USB Library:
+	https://developer.android.com/reference/android/hardware/usb/package-summary
+
+Task Connection with Requirement:
+	1. 2.
+	2. 2.
+	3. 1.
+	4. 4.
+	5. 3.
+	6. 5.
+	7. 5.
+	8. 5.
+	
+Task Man-Hours Estimate:
+	1. 0.5/1/2
+	2. 0.5/1/2
+	3. 0.1
+	4. 1/2/5
+	5. 1/2/3
+	6. 1/2/5
+	7. 0.1
+	8. 2/3/6
+	Sum. 6.2/11.2/23.2
+	
+Task Lines of Code Estimate:
+	1. 20
+	2. 30
+	3. 50
+	4. 10
+	5. 20
+	6. 100
+	7. 10 
+	8. 30
+	Sum: 270, 0.27 KDLOC
+	
+Cocomo Factors:
+	1. Analyst Capacity: Low (Beginning Students)
+	2. Applications Experience: Very Low (<=4 Months)
+	3. Application of SENG/Programming Practices:  Nominal (Doing the assignment)
+	4. Complexity of the Project: High (Event based programming; weakest estimate)
+	4. Computational Operations: Nominal.
+	4. Device Dependent Operations: High (or Nominal)
+	4. Data Management Operations: Low to Nominal
+	5. Memory Constraints: Nominal.
+	6. Programming Language Experience: Low (<4 Months) (Factoring in how short CPSC 233 was).
+	7. Required Turnabout Time: Low.
+	8. Required Software Reliability: Nominal or Low
+	9. Required Development Schedule/Schedule Constraint: High??
+	10. Runtime Performance Contraints: Nominal.
+	11. Databse Size: Low (for now)
+	12. Software Engineer Capacity: High
+	13. Use of Software Tools: High/Very High (IDE)?
+	14. Virtual Machine Experience: Low (Maybe??)
+	15. Volatility of the Virtual Machine: Very Low (Do not expect changes, really).
