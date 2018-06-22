@@ -38,6 +38,7 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
 
         processor = new Processor(this);
         processor.addObserver(this);
+        processor.addObserver(this); //wanted to check if observer list gets increased
 
         setContentView(R.layout.activity_recorder_screen);
         setTitle("Muon Event Detector");
@@ -178,7 +179,10 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
     }
     @Override
     public void update(){
-        clearButton.setText("Notified");
+        int length = processor.observersList.size();
+        String length1 = Integer.toString(length);
+
+        clearButton.setText("Observerlist size"+length1);//wanted to check if observerlist gets increased
 
         //do something with the update notification 
 

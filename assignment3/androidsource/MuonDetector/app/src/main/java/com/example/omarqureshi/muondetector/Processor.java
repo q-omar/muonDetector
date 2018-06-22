@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class Processor {
-	private List<Observer> observersList = new ArrayList<Observer>();
+	public List<Observer> observersList = new ArrayList<Observer>(); //made this public for now just wanted to check if list is being added
 	private UsbDeviceInterface usb;
 	private Date startTime;
 	private Date stopTime;
