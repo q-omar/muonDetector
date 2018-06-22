@@ -30,6 +30,8 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
     private TextView connectionText;
     private TextView eventsMinText;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -158,6 +160,7 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
             dateText.setVisibility(View.INVISIBLE);
             eventText.setVisibility(View.INVISIBLE);
             clearButton.setText("Summary");
+            processor.notifyObservers();
         } else if (!timerIsRunning){
 
             String averageString = Double.toString(processor.getEventsPerMin());
@@ -175,6 +178,7 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
     }
     @Override
     public void update(){
+        clearButton.setText("Notified");
 
         //do something with the update notification 
 
