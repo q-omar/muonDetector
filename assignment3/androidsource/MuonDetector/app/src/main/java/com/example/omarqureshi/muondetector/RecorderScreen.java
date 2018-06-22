@@ -14,14 +14,14 @@ import java.util.Random;
 
 
 
-public class RecorderScreen extends AppCompatActivity {
+public class RecorderScreen extends AppCompatActivity implements Observer{
     private TextView countDownLabel;
     private Button countDownButton;
     private Button clearButton;
     private CountDownTimer countDownTimer;
     private long timeRemaining = 60000;
     private boolean timerIsRunning;
-    private Processor processor;
+    public Processor processor;
     private TextView eventText;
     private TextView dateText;
     private TextView summaryText;
@@ -35,6 +35,8 @@ public class RecorderScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         processor = new Processor(this);
+        processor.addObserver(this);
+
         setContentView(R.layout.activity_recorder_screen);
         setTitle("Muon Event Detector");
 
@@ -85,22 +87,6 @@ public class RecorderScreen extends AppCompatActivity {
         }
     }
 
-
-  /*  public void generateEvent(){
-        Random rand = new Random();
-        int randomInt = rand.nextInt(4) + 1;
-        if (randomInt==1){
-            processor.addEvent();
-            String newEventString = Integer.toString(processor.getEventCount());
-            eventText.setText(newEventString);
-            eventText.setVisibility(View.VISIBLE);
-           DateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-           String strDate = df.format(processor.getCurrentTime());
-           String fullStamp = "Last Event Stamp: "+strDate;
-           dateText.setText(fullStamp);
-           dateText.setVisibility(View.VISIBLE);
-        }
-    } */
 
     public void updateScreen() {
         String newEventString = Integer.toString(processor.getEventCount());
@@ -187,7 +173,12 @@ public class RecorderScreen extends AppCompatActivity {
         }
 
     }
+    @Override
+    public void update(){
 
+        //do something with the update notification 
+
+    }
 
     @Override
     public void finish(){

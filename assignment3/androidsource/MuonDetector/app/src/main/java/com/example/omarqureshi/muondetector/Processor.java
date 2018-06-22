@@ -10,13 +10,11 @@ import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class Processor {
-
+	private List<Observer> observersList = new ArrayList<Observer>();
 	private UsbDeviceInterface usb;
-
 	private Date startTime;
 	private Date stopTime;
 	private Date currentTime;
-
 	private boolean isRecording = false;
 
 	private int eventCount = 0;		// Number of events over a collection period
@@ -24,7 +22,7 @@ public class Processor {
 	private static final int MAX_EVENTS = 1000; // might need this later
 
     public Processor(Context context) {
-        usb = new UsbDeviceInterface(context);
+		usb = new UsbDeviceInterface(context);
     }
 
     /**
@@ -35,8 +33,9 @@ public class Processor {
         String[] connectedDevices = usb.listDevices();
         String allDevices = Arrays.toString(connectedDevices);
         if (connectedDevices.length > 0) {
-            usb.initializeConnection(connectedDevices[0]);
-        }
+			usb.initializeConnection(connectedDevices[0]);
+			notifyObservers();
+		}
         return usb.getFTDIConnected();
     }
 
@@ -50,13 +49,6 @@ public class Processor {
         }
 		return eventCount;
 	}
-
-	/**
-	 * Records a new instance of a muon event.
-	 */
-	/*public void addEvent() {
-		eventCount++;
-	} */
 
 	/**
 	 * Called when the user chooses to Start/Stop Recording. Saves the appropriate timestamp
@@ -124,6 +116,7 @@ public class Processor {
 		return diffInMinutes;
 	}
 
+
 	/**
 	 * Deletes all recorded event data.
 	 */
@@ -134,6 +127,15 @@ public class Processor {
 		}
 	}
 
+	public void notifyObservers(){ //call this at the appropriate time to notify observers
+        for (Observer observer : observersList) {
+            observer.update();
+        }
+     }
+
+     public void addObserver(Observer observer){
+        observersList.add(observer);		
+     }
 }
 
 

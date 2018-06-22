@@ -77,6 +77,7 @@ public class UsbDeviceInterface {
             boolean isFTDI = ftdiManager.isFtDevice(connectedDevice);
             if (isFTDI) {
                 ftdiDevice = ftdiManager.openByUsbDevice(context, connectedDevice);
+
             }
             setArduinoSettings();                   //Todo: Future upgrades to this section, to be able to select the relevant Usb settings manually or something.
         }
@@ -158,6 +159,8 @@ public class UsbDeviceInterface {
         return gotReading;
     }
 
+
+
     /**
      * This method tells you how many detection events were recorded.
      * @return The count of muon detection events recorded in rawData.
@@ -165,5 +168,7 @@ public class UsbDeviceInterface {
     public int getNumberOfEvents() {
         return rawData.size();
     }
+
+    
 
 }
