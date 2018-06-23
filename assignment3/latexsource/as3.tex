@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage{parskip}
+\usepackage{caption}
+\captionsetup{font=footnotesize}
 \title{\vspace{-2.0cm} \textbf{SENG 300: Assignment 3}}
 \author{Celina Ma, John Ngo, Omar Qureshi}
 \begin{document}
@@ -17,7 +19,15 @@
 
 \section*{Deliverable \#1}
 
-Need to adjust this section for our software process model.
+Of the avalible software development models, our team has chosen the scrum development model. This choice comes from the nature of our project and our client avaliability - our project is new and novel to all of us, requiring a high degree of experimentation and clarification. Furthermore, we are able to communicate with our client by email on a daily basis if need be, and a weekly basis in person as well. The project size is also considerable.
+
+Firstly, based off these aspects of our project, most incremental models are not ideal. Incremental models are best when we can get a definite idea of what we want from our client and know what we can or cannot do. Furthermore, they tend to be based off a heavy initial requirements gathering phase with a client, followed by an implementation phase where client feedback is impossible or not needed. Concurrant and waterfall style both fall under this incremental category. However, in our project, we did not have a clear, definitive idea of what our client wants. This project is also novel and experimental, and as such we do not have a clear sense of what we can/cannot do and how to do so. Finally, we can meet with our client on a weekly basis and communicate on a daily basis - to follow an incremental model would thus squander this advantage. As such, neither incremental model has been chosen.
+
+Opportunistic model is best on tiny projects, preferably one without a client. We have a client, and our project is not small, being more than a hundred lines of code. As such, the opportunistic model is a bad fit for our project and is not chosen.
+
+We had considered choosing the Spiral model at first, and at first it seemed like a good fit. Spiral is ideal for long term projects with occasional periodic communication with our client. However, it also requires that we know how to do risk assessment, which we had yet to learn, and it is made of short waterfall bursts, which possess all of the downsides of waterfall within the one burst. As our project time is incredibly short as well, for the purposes of this class, it turns out that spiral is not a good fit - we did not know risk assessment, nor did we have the time to make use of the iteration desired and given by spiral.
+
+This leaves the scrum model. In the scrum model, we gather requirements into a project backlog, and then with communicaton and client-centric feedback, we work on tackling and handling each requirement within the backlog, with changes simply being more additions to the backlog. Scrum can be applied for any length of time, short or long, and being an agile methodology it allows for significant room to experiment and adjust requirements as greater understanding of the requirements and of our capacities, and of our client's desires comes up. This seems ideal for our team, where we can communicate with our client very often and adjust as needed. Indeed, in practice scrum is how our software development progressed. We also have intentions of continuing with the project after SENG, since we are working with a real world client, and as such the flexible timescale of SCRUM as opposed to Spiral further add to its value. As such, we chose the SCRUM method.
 
 
 \subsection*{1-1: Functional Requrements (FRs)}
@@ -41,9 +51,9 @@ Along with receiving input from the detector, it then must be able to display th
 While a live reading is displayed, the 'Summary' button takes a snapshot of the readings average after recording is finished. 
 
 \vskip 6mm
-4. "The app must be able to record the averaged  'get readings' in a table." 
+4. "The app must be able to record the averaged  'events per min' in a table." 
 
-After pressing the 'get reading' button, the value is averaged and stored into a table that is accessible in another part/menu of the application.
+After the recording ends, the values must be stored into a table that is accessible in another part/menu of the application.
 
 \vskip 6mm
 5. "The app must be able to export out the saved data to a computer so that further data interpretation and processing can be performed."
@@ -64,16 +74,16 @@ A transition animation is often desired to express user action in a clearer way.
 
 \vskip 4mm
 
-3. "The app should record the readings within 0.5s after pressing the 'get reading' button."
+3. "The app should record the readings within 0.5s after pressing the 'Start' button."
 
 This ensures the user doesn't have to wait an unusually large amount of time to get the reading. It also stops the user from getting frustrated and pressing the button again needlessly. This NFR would fall under the response time category. 
 \vskip 4mm
-4. "The app should emit a feedback sound when the user presses the ‘get reading button’" 
+4. "The app should emit a feedback sound when the user presses the ‘Start' button’" 
 
 Giving the user direct confirmation of their action being applied is helpful and again stops user from pressing the button unnecessarily. This NFR would fall under the usability category.
 
 \vskip 4mm
-5. "The app should present a message if the muon detector is connected or not."
+5. "The app should present a relevant UI element to let the user know if the muon detector is connected or not."
 
 This makes sure that a precondition of using the app is met, which is having the miniUSB cable plugged into the phone and detector. This NFR would fall under the learnability/usability category.
 
@@ -84,9 +94,9 @@ This makes sure that a precondition of using the app is met, which is having the
 
 After considering both use cases and user stories, we conclude that the user stories method is a better way to represent the systems requirements for our project. Just as with the selection of our software process model, this comes from consideration of our circumstances compared to the strengths and weaknesses of each model.
 
-The largest, most important draw of the user stories model is that it is extremely simple and to the point. Its structure, where a given user wants to do something for a given reason, is very, very close to how our client expresses what he wants out of the software, and as such is extremely attractive. Along with the emphasis on action and reason, user stories allow for the communication of overarching requirements goals as opposed to more nitty-gritty details, which fits with the iterative model of development we have chosen, since iterative models work towards a general end goal but don’t care about details at each stage.
+The largest, most important draw of the user stories model is that it is flexible and dynamic. Its structure, where a given user wants to do something for a given reason, is how our client expresses what he wants out of the software. It is also client fairly where we can show the story cards and they would be able to understand as opposed to a use case diagram being a bit more harder to comprehend for a non technical audience. Along with the emphasis on action and reason, user stories allow for the communication of overarching requirements goals as opposed to more nitty-gritty details, which fits with the iterative model of development we have chosen, since iterative models work towards a general end goal but don’t care about details at each stage.
 
-The largest, most important draw of the use cases model is that done correctly, it can map out the structure of the very application needed, at least on some level. However, this backbone given and its greater emphasis on specific details compared to user stories does not lend it quite as well to an iterative model; and furthermore, it is more technically designed than user stories, which are closer to natural language. As such, while not a terrible alternative, it just doesn’t provide nearly as many advantages as with user stories.
+The largest, most important draw of the use cases model is that done correctly, it can map out the structure of the very application needed, at least to some level. However, this backbone given and its greater emphasis on specific details compared to user stories does not lend it quite as well to an iterative mode. We need to be flexible and dynamic given our short time period so changing use case diagrams is harder than changing user stories. Like mentioned, it is also more technically designed than user stories which makes it harder to communicate to our client. As such, while a decent alternative, it just doesn’t provide nearly as many advantages as with user stories in our specific case.
 
 Therefore, we have selected user stories to represent our system requirements.
 
@@ -192,98 +202,48 @@ Demo videos can be viewed below:
 \section*{Deliverable \#4}
 \subsection*{4-1: Poker Effort Estimation}
 
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.8\textwidth]{dataproctable2.png}  
+      \caption{Tabulating the data processing functional requirement into a set of tasks and rating them in person-hours/KDLOC}
+\end{figure}
+
+\newpage
+
 For our planning poker session, we chose to create tasks for the following functional requirement:
 
 \textbf{The app must process event data from the muon detector to determine the number of events per minute over a specific time interval.}
 
-We generated six tasks for this functional requirement and individually rated the difficulty of each task from one to ten. During our planning session, we generally had consensus for our ratings, with some variance between us. 
+We generated seven tasks for this functional requirement and individually gave our estimates in person-hours. During our planning session, we generally had consensus for estimates, though there was some variance between us. 
 
-For example, the task, “Create an addEvent method to store processed MuonEvents to an array”, was considered to be relatively easy by all of us. However, one person rated the difficulty slightly higher and suggested that this method may need to check if the event data is valid (eg. if the timestamps are in an order that makes sense). We discussed some other issues that may occur, such as what should happen if a maximum number of events had been reached. These additional factors helped clarify the difficulty of the task.
+For example, the task, “Create an addEvent method to store processed MuonEvents to an array”, was considered to be relatively easy by all of us. However, one person estimated the effort slightly higher and suggested that this method may need to check if the event data is valid (eg. if the timestamps are in an order that makes sense). We discussed some other issues that may occur, such as what should happen if a maximum number of events had been reached. These additional factors helped refine our estimations for person-hours of the task.
 
-The task of “calculating the difference in minutes between two timestamps” was more divisive. One of our group members believed the task would be quite difficult (7) but another believed it would be easy (3), since Java likely contained some built-in functionality to help with the task. We learned that this was indeed the case and adjusted our rankings accordingly.
-We all agreed that the task of “calculating events per minute over a specific time interval” would be difficult. During our discussion, we contemplated how the number of events per minute could be displayed “live” on our app screen while collecting data, since that would involve frequently saving new timestamps for the calculation. We also wondered if events per minute should only be calculated over some fixed time interval (eg. the last 10 seconds of recording) or use the whole time spent recording.
+The task “calculating the difference in minutes between two timestamps” was more divisive. One of our group members believed the task would be quite difficult, requiring 5 person-hours. Another believed it would be easy requiring only 1 person-hours since Java likely contained some built-in functionality to find thet time interval difference between two date stamps. We learned that this was indeed the case and adjusted our estimations accordingly, agreeing it shouldn't take too long (1 person-hour).
 
-Overall, the planning poker session was useful for evaluating our list of tasks by raising new questions on generating ideas for test cases and structure.
+We all agreed that the task of “calculating events per minute over a specific time interval” would require the most person-hours (4.0). During our discussion, we contemplated how the number of events per minute could be displayed “live” on our app screen while collecting data, since that would involve frequently saving new timestamps for the calculation. We also wondered if events per minute should only be calculated over some fixed time interval (eg. the last 10 seconds of recording) or use the whole time spent recording.
 
+The planning poker session was useful for evaluating our list of tasks by raising new questions on generating ideas for test cases and structure. Overall, this exercise helped create estimates on the challenges to be faced when completing the functionality of the application. This also helped plan our schedules since we now had a general idea of time required for each step. 
 
-\subsection*{4-2: Silent Grouping Effort Estimation}
+\subsection*{4-2: Actual Effort Comparison}
 
-Once our planning poker session was completed, we moved along to do silent grouping effort estimation. We now had to define features of the functional requirement rather than the tasks. The definition of a feature we used was an element the user can see or interact with, corresponding to the functional requirement defined in \textit{Deliverable 1-1}. The features we came up with were:
+Our actual efforts ended up lying close to our predicted values in person-hours for our functional requirements. To reiterate, the core functional requirements we focused on were:
 
 \begin{enumerate}
-
-\item The user is able to press the 'Start Recording' button to begin when data collection starts.
-\item The user is able to see events being displayed on the recording screen after each new event is detected and added.
-\item The user is able to stop the recording midway if desired.
-\item The user is able to clear the screen once a session is done to start a new recording session.
-\item The user is able to see when a recording is in progress by noticing the green Start Recording button changes into a red Recording (duration remaining in s) button.
+  \item The app must be able to connect with the muon detector.
+  \item The app must be able to process event data from the muon detector.
+  \item The app must be able to display processed information to the user.
 \end{enumerate}
 
-After coming up with the above list, we wrote them down on some post-it notes and used a table rather than a wall to do the sorting;
+The first functional requirement proved to be slightly more difficult than initially thought. Communication with the arduino based muon detector meant trying to search the internet for open source libraries such as UART or serial. The time spent searching and learning about the libraries outweighed the time actually implementing it in Java. We predicted 19 person-hours total for accomplishing all tasks of the first functional requirements but in actuality it was close to 25 person-hours.
 
-\begin{figure}[h]
-\centering
-	\includegraphics[width=0.9\textwidth]{silentimg1.png}
-	\caption{Post it notes started initially in the unsorted pile and a table was used for convenience}
-\end{figure}
+For our second functional requirement, our predictions were pretty accurate. The two most challenging tasks of that requirement were "calculating difference between two time stamps" and "calculating events per minute over a specific time interval". Since Java functionality existed for calculating time difference between date stamps, it was simply trying to learn how to use it which took time rather the implementation. We did predict the events per minute calculation would be trickier but overall, it still lied close to our estimates. We ended up spending close to 6 person-hours on the functional requirement which was the same as the predicted value.
 
-\newpage
+The last functional requirement ended up being easier than expected. We initially thought it may be time consuming configuring Android studio and working with the GUI interfaces. It was actually fairly straight forward and implementing a few screens with buttons took less time than thought. We predicted 5 person-hours for accomplishing this functional requirement when in actuality it was closer to 3 person-hours. 
 
-One of the issues we noticed with the silent grouping method was the lack of granularity of the piles. A feature was either easy or hard whereas the planning poker method was able to give a finer sense of difficulty. As such, clearly easy or hard features were the first to get picked and sorted which is seen in the below in progress shot; 
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{silentimg2.png}
-	\caption{Silent grouping effort estimation in progress}
-	\end{figure}
-
-We then attempted to categorize some of the harder features such as displaying the live event being detected and added to a running total. This aligned with our previously defined hard task in \textit{Deliverable 1-1} and a consensus was reached that this would indeed be difficult. 
-
-Afterwards, a feature that was hard to reach an agreement on was stopping the recording half way. Stopping it mid way may prove to be difficult so after a few back and forth for that feature, we decided to put it in a middle 'hold' section as seen below:
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{silentimg3.png}
-	\caption{Completed session with one of the features being placed on hold}
-	\end{figure}
-	
-Overall, silent grouping  proved to be a valuable medium of communication in allowing team members to interact with one another. An exchange of different views can ultimately help in creating a better application. 
+In summary, the predicated values as a whole for all three functional requirements and their individual tasks lie fairly close to our estimates. In the end, it's always better to overestimate the time required to accomplish your tasks so that you can plan out your schedule and time accordingly.
 
 
-\newpage
-\subsection*{4-3: Task Breakdown}
 
-\begin{figure}[h]
-  \centering
-      \includegraphics[width=1\textwidth]{table1.png}  
-\end{figure}
-
-Our first table shows the three main functional requirements picked for the app and their corresponding short names to be used in the following tables.
-
-\begin{figure}[h]
-  \centering
-      \includegraphics[width=1.0\textwidth]{USBMtable3.png}  
-\end{figure}
-
-Our second table corresponds to the USB Manager functional requirement. The table format serves as a visual aid for breaking down requirements into tasks and effort, which also provides a documentation reference in the future for cost estimation. 
-
-\newpage
-\begin{figure}[h]
-  \centering
-      \includegraphics[width=1.0\textwidth]{dataproctable2.png}  
-\end{figure}
-
-Our second requirement is similarly broken down into individual tasks and their corresponding estimated effort.
-
-\newpage
-\begin{figure}[h]
-  \centering
-      \includegraphics[width=1.0\textwidth]{displaytable4.png}  
-\end{figure}
-
-Finally, our third table for the final display functional requirement is also broken down. 
-
-Overall, this exercise in the design process helped create estimates on the challenges to be faced when completing functionality of the application. This also helped plan our schedules since we now had a general idea of time required for each step. 
 
 
 
@@ -373,13 +333,13 @@ Our demo video featuring all three functional requirements can be viewed at the 
 
 At the top of our diagram, there are three classes extending the class AppCompatActivity. This indicates that these are the main Activities of our app, representing the screens the user can access; MainActivity, AboutScreen and RecorderScreen correspond to the Main Menu, About, and Recorder screens respectively.
 
-The Main Menu screen allows the user to access the About and Recorder screens. Thus, MainActivity has the methods openRecorderScreen and openAboutScreen. The About screen simply displays information, so it does not have relevant attributes and operations to show.
-
+The Main Menu screen allows the user to access the About and Recorder screens. Thus, MainActivity has the methods openRecorderScreen and openAboutScreen. The About screen simply displays information and has no attributes. Its only methods are onCreate and finish(), which are default Android Studio methods allowing the About screen to be displayed and closed.
 RecorderScreen maintains a reference to a Processor object, which communicates between the UsbDeviceInterface and the RecorderScreen.
 
 The RecorderScreen starts a timer when the user chooses to start recording. This is conveyed to the Processor, which will save the time recording starts and initialize the UsbDeviceInterface. The UsbDeviceInterface will open a wired connection to the muon detector and store raw data from it. When this data needs to be interpreted and displayed on the RecorderScreen, the Processor will make requests to the UsbDeviceInterface and update eventCount according to the amount of raw data saved.
 
 When the recording session timer ends or when the user wishes to clear their saved data, the RecorderScreen sends another signal to Processor. The Processor will then reset its saved data and the raw data in UsbDeviceInterface as needed.
+
 
 
 \newpage
@@ -417,12 +377,20 @@ Upon creation, RecorderScreen will ask the Processor to try to connect to the de
 
 \subsection*{8-1: Class Diagram with Design Pattern}
 
+\begin{figure}[h] \centering
+	\includegraphics[width=1.2\textwidth]{classdiagramD8.png}
+	\caption{A class diagram for our application. Classes that are part of the Adapter design pattern are shown in purple}
+\end{figure}
 
 
 \subsection*{8-2: Explanation}
 
 
+We decided to implement the Adapter design pattern in our project. In our implementation, the Processor class acts as a client. The target interface is the DeviceInterface class, which contains methods used by the Processor to communicate with the muon detector. The FtdiDeviceAdaptor implements this interface to translate requests from the Processor to the third-party D2xx Library. This library is the adaptee which directly handles connecting to the muon detector.
 
+This pattern was chosen to make our product more flexible in future updates. As our application develops, it may need to support reading data from devices that are not compatible with the external D2xx library. With our updated code, we can now use adapters implementing DeviceInterface to handle specific cases.
+
+With this design pattern, the Processor only uses methods defined by the DeviceInterface to receive data from an external device, regardless of the type of device it is. This reduces coupling since the Processor is only associated with the interface, and not individual adapters. The cohesion of classes has also been increased, since each adapter added will handle a particular type of device, rather than having one class managing many at once.
 
 
 \section*{Deliverable \#9}
@@ -432,7 +400,44 @@ See PowerPoint presentation in the submitted .zip file.
 
 \section*{Deliverable \#10}
 
-Collaboration with client blurb.
+After finishing the main functional requirements of our app, we sent the demo video from Assignment 2 to our client, Dr. Jason Donev:
+
+\begin{figure}[h] \centering
+	\includegraphics[width=0.9\textwidth]{email1.png}
+\end{figure}
+
+\newpage
+Jordan was a student of Dr. Donev who created the muon detector that we used to test our app. Thanks to our client, we were luckily able to receive some feedback from him as well.
+
+\begin{figure}[h] \centering
+	\includegraphics[width=1.08\textwidth]{email2.png}
+\end{figure}
+
+We had slight miscommunications when arranging a time to meet Dr. Donev before our class presentation. Thankfully, we found a new time to meet under short notice: 
+
+\begin{figure}[h] \centering
+	\includegraphics[width=1.08\textwidth]{email3.png}
+\end{figure}
+
+Our final meeting with Dr. Donev was on Monday, June 18th. Omar was unable to attend this meeting, but John and Celina were present.
+
+
+\begin{figure}[h] \centering
+	\includegraphics[width=0.9\textwidth]{client1.png}
+	\caption{John and Dr. Donev testing out the muon detector app during meeting.}
+\end{figure}
+
+As a pleasant surprise, Dr. Donev also introduced us to a visiting nuclear physicist, whom he was speaking with just before our appointment. We briefly explained our application to her and allowed her to try it. It was helpful to see someone unfamiliar with our system interact with it for the first time; she was interested in our app and thought the interface was intuitive.
+
+After the nuclear physicist left, we continued to discuss our app with Dr. Donev. The implementation of our product’s basic functional requirements was complete at this point, so we did not have much to ask about regarding the assignment. We mainly discussed where to take our project in the future. 
+
+Dr. Donev suggested that our app should allow the user to change how long a data recording session lasts, since it only allows the user to record for one minute. We also talked about implementing the data log feature that had been desired since the start of the project. Dr. Donev provided his physics knowledge to estimate how many muon events the app would need to store in extreme conditions, which we wanted to know due to our memory concerns. The meeting ended with Dr. Donev wishing us luck with the project and hoping to hear about our progress in the future.
+
+Overall, Dr. Donev has been a fantastically helpful and supportive client for our team. He was always willing to give suggestions for improvement and meet with us, despite his busy schedule. Again, our greatest challenge with communicating with our customer was finding convenient times to meet in-person. We struggled a bit with rescheduling meetings and beginning appointments on time, but we still made the most of the time we had. For the most part, communication about the project itself was successful, with misunderstandings being resolved quickly.
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  21 JUN 2018 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 JUN 2018 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -255,36 +255,53 @@ Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@ContinuedFloat=\count111
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
 ) (./as3.aux)
 \openout1 = `as3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+ (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count111
-\scratchdimen=\dimen118
+\scratchcounter=\count112
+\scratchdimen=\dimen125
 \scratchbox=\box30
-\nofMPsegments=\count112
-\nofMParguments=\count113
+\nofMPsegments=\count113
+\nofMParguments=\count114
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count114
-\MPscratchDim=\dimen119
-\MPnumerator=\count115
-\makeMPintoPDFobject=\count116
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen126
+\MPnumerator=\count116
+\makeMPintoPDFobject=\count117
 \everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -304,7 +321,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -312,295 +329,253 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count117
+\c@section@level=\count118
 )
-LaTeX Info: Redefining \ref on input line 13.
-LaTeX Info: Redefining \pageref on input line 13.
-LaTeX Info: Redefining \nameref on input line 13.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./as3.out) (./as3.out)
 \@outlinefile=\write3
 \openout3 = `as3.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 17.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<storycard1.png, id=25, 344.28625pt x 174.6525pt>
+ [4]
+<storycard1.png, id=29, 344.28625pt x 174.6525pt>
 File: storycard1.png Graphic file (type png)
 <use storycard1.png>
-Package pdftex.def Info: storycard1.png  used on input line 104.
+Package pdftex.def Info: storycard1.png  used on input line 114.
 (pdftex.def)             Requested size: 251.9989pt x 127.83638pt.
-<storycard2.png, id=27, 344.28625pt x 173.64874pt>
+<storycard2.png, id=31, 344.28625pt x 173.64874pt>
 File: storycard2.png Graphic file (type png)
 <use storycard2.png>
-Package pdftex.def Info: storycard2.png  used on input line 111.
+Package pdftex.def Info: storycard2.png  used on input line 121.
 (pdftex.def)             Requested size: 251.9989pt x 127.10168pt.
-<storycard3.png, id=28, 353.32pt x 181.67876pt>
+<storycard3.png, id=32, 353.32pt x 181.67876pt>
 File: storycard3.png Graphic file (type png)
 <use storycard3.png>
-Package pdftex.def Info: storycard3.png  used on input line 119.
+Package pdftex.def Info: storycard3.png  used on input line 129.
 (pdftex.def)             Requested size: 251.9989pt x 129.5805pt.
- [4pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.129 \newpage
-               <./storycard1.png> <./storycard2.png> <./storycard3.png>]
-<storymap.png, id=38, 1244.65pt x 888.31876pt>
+ [5 <./storycard1.png> <./storycard2.png> <./storycard3.png>]
+<storymap.png, id=45, 1244.65pt x 888.31876pt>
 File: storymap.png Graphic file (type png)
 <use storymap.png>
-Package pdftex.def Info: storymap.png  used on input line 134.
+Package pdftex.def Info: storymap.png  used on input line 144.
 (pdftex.def)             Requested size: 683.9978pt x 488.18375pt.
 
-Overfull \hbox (76.40451pt too wide) in paragraph at lines 133--135
+Overfull \hbox (76.40451pt too wide) in paragraph at lines 143--145
  []|  [] 
  []
 
 
-LaTeX Warning: Float too large for page by 110.60742pt on input line 137.
+LaTeX Warning: Float too large for page by 92.27824pt on input line 147.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.138 \end{landscape}
-                      <./storymap.png>]
-<overviewsketches.png, id=45, 1650.165pt x 1782.66pt>
+[6 <./storymap.png>]
+<overviewsketches.png, id=52, 1650.165pt x 1782.66pt>
 File: overviewsketches.png Graphic file (type png)
 <use overviewsketches.png>
-Package pdftex.def Info: overviewsketches.png  used on input line 146.
+Package pdftex.def Info: overviewsketches.png  used on input line 156.
 (pdftex.def)             Requested size: 396.0022pt x 427.79274pt.
 
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 146--147
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 156--157
  [][] 
  []
 
-[6
+[7
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) ha
-s been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.150 \newpage
-               <./overviewsketches.png>]
-<elaboratingsketches.png, id=54, 1883.035pt x 1800.7275pt>
+ <./overviewsketches.png>]
+<elaboratingsketches.png, id=62, 1883.035pt x 1800.7275pt>
 File: elaboratingsketches.png Graphic file (type png)
 <use elaboratingsketches.png>
-Package pdftex.def Info: elaboratingsketches.png  used on input line 163.
+Package pdftex.def Info: elaboratingsketches.png  used on input line 173.
 (pdftex.def)             Requested size: 302.39868pt x 289.16641pt.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
- has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.167 \newpage
-               <./elaboratingsketches.png>]
-<storyboard.png, id=65, 979.66pt x 1209.51875pt>
+ [8 <./elaboratingsketches.png>]
+<storyboard.png, id=72, 979.66pt x 1209.51875pt>
 File: storyboard.png Graphic file (type png)
 <use storyboard.png>
-Package pdftex.def Info: storyboard.png  used on input line 174.
+Package pdftex.def Info: storyboard.png  used on input line 184.
 (pdftex.def)             Requested size: 413.9978pt x 511.1319pt.
 
-Overfull \hbox (42.20477pt too wide) in paragraph at lines 173--175
+Overfull \hbox (42.20477pt too wide) in paragraph at lines 183--185
  []|  [] 
  []
 
-[8pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.178 \newpage
-               <./storyboard.png>] [9]
-<silentimg1.png, id=82, 4047.12pt x 3035.34pt>
-File: silentimg1.png Graphic file (type png)
-<use silentimg1.png>
-Package pdftex.def Info: silentimg1.png  used on input line 226.
-(pdftex.def)             Requested size: 323.9978pt x 242.9711pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[10]
-<silentimg2.png, id=94, 4047.12pt x 3035.34pt>
-File: silentimg2.png Graphic file (type png)
-<use silentimg2.png>
-Package pdftex.def Info: silentimg2.png  used on input line 236.
-(pdftex.def)             Requested size: 180.0pt x 134.96336pt.
- [11pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.242 A
-       fterwards, a feature that was hard to reach an agreement on was stopp...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
-s been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.242 A
-       fterwards, a feature that was hard to reach an agreement on was stopp...
- <./silentimg1.png> <./silentimg2.png>]
-<silentimg3.png, id=101, 4047.12pt x 3035.34pt>
-File: silentimg3.png Graphic file (type png)
-<use silentimg3.png>
-Package pdftex.def Info: silentimg3.png  used on input line 246.
-(pdftex.def)             Requested size: 180.0pt x 134.96336pt.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.253 \newpage
-               <./silentimg3.png>]
-<table1.png, id=107, 1892.06876pt x 533.995pt>
-File: table1.png Graphic file (type png)
-<use table1.png>
-Package pdftex.def Info: table1.png  used on input line 258.
-(pdftex.def)             Requested size: 360.0pt x 101.59862pt.
-<USBMtable3.png, id=108, 951.555pt x 825.0825pt>
-File: USBMtable3.png Graphic file (type png)
-<use USBMtable3.png>
-Package pdftex.def Info: USBMtable3.png  used on input line 265.
-(pdftex.def)             Requested size: 360.0pt x 312.14973pt.
- [13 <./table1.png> <./USBMtable3.png>]
-<dataproctable2.png, id=117, 952.55875pt x 1245.65375pt>
+[9 <./storyboard.png>]
+<dataproctable2.png, id=82, 949.5475pt x 1243.64626pt>
 File: dataproctable2.png Graphic file (type png)
 <use dataproctable2.png>
-Package pdftex.def Info: dataproctable2.png  used on input line 273.
-(pdftex.def)             Requested size: 360.0pt x 470.76837pt.
-
-[14 <./dataproctable2.png>]
-<displaytable4.png, id=123, 946.53625pt x 1208.515pt>
-File: displaytable4.png Graphic file (type png)
-<use displaytable4.png>
-Package pdftex.def Info: displaytable4.png  used on input line 281.
-(pdftex.def)             Requested size: 360.0pt x 459.62772pt.
- [15 <./displaytable4.png>]
-<codeimg1.png, id=129, 629.35126pt x 1211.52625pt>
+Package pdftex.def Info: dataproctable2.png  used on input line 207.
+(pdftex.def)             Requested size: 288.0011pt x 377.19568pt.
+ [10 <./dataproctable2.png>] [11] [12]
+<codeimg1.png, id=104, 629.35126pt x 1211.52625pt>
 File: codeimg1.png Graphic file (type png)
 <use codeimg1.png>
-Package pdftex.def Info: codeimg1.png  used on input line 298.
+Package pdftex.def Info: codeimg1.png  used on input line 258.
 (pdftex.def)             Requested size: 226.80176pt x 436.59279pt.
-<codeimg2.png, id=130, 498.86375pt x 483.8075pt>
+<codeimg2.png, id=105, 498.86375pt x 483.8075pt>
 File: codeimg2.png Graphic file (type png)
 <use codeimg2.png>
-Package pdftex.def Info: codeimg2.png  used on input line 304.
+Package pdftex.def Info: codeimg2.png  used on input line 264.
 (pdftex.def)             Requested size: 226.80176pt x 219.95558pt.
- [16 <./codeimg1.png>]
-<codeimg3.png, id=138, 546.04pt x 378.41376pt>
+ [13 <./codeimg1.png>]
+<codeimg3.png, id=115, 546.04pt x 378.41376pt>
 File: codeimg3.png Graphic file (type png)
 <use codeimg3.png>
-Package pdftex.def Info: codeimg3.png  used on input line 310.
+Package pdftex.def Info: codeimg3.png  used on input line 270.
 (pdftex.def)             Requested size: 298.80066pt x 207.07153pt.
-
-[17 <./codeimg2.png> <./codeimg3.png>]
-<codeimg4.png, id=145, 713.66624pt x 1013.7875pt>
+ [14 <./codeimg2.png> <./codeimg3.png>]
+<codeimg4.png, id=124, 713.66624pt x 1013.7875pt>
 File: codeimg4.png Graphic file (type png)
 <use codeimg4.png>
-Package pdftex.def Info: codeimg4.png  used on input line 325.
+Package pdftex.def Info: codeimg4.png  used on input line 285.
 (pdftex.def)             Requested size: 284.39758pt x 403.99185pt.
- [18 <./codeimg4.png>]
-<codeimg5.png, id=152, 654.445pt x 786.94pt>
+ [15 <./codeimg4.png>]
+<codeimg5.png, id=132, 654.445pt x 786.94pt>
 File: codeimg5.png Graphic file (type png)
 <use codeimg5.png>
-Package pdftex.def Info: codeimg5.png  used on input line 331.
+Package pdftex.def Info: codeimg5.png  used on input line 291.
 (pdftex.def)             Requested size: 360.0pt x 432.87837pt.
- [19 <./codeimg5.png>]
-<codeimg6.png, id=159, 914.41624pt x 1194.4625pt>
+ [16 <./codeimg5.png>]
+<codeimg6.png, id=139, 914.41624pt x 1194.4625pt>
 File: codeimg6.png Graphic file (type png)
 <use codeimg6.png>
-Package pdftex.def Info: codeimg6.png  used on input line 339.
+Package pdftex.def Info: codeimg6.png  used on input line 299.
 (pdftex.def)             Requested size: 396.0022pt x 517.2723pt.
 
-Overfull \hbox (36.0022pt too wide) in paragraph at lines 339--340
+Overfull \hbox (36.0022pt too wide) in paragraph at lines 299--300
 [][] 
  []
 
-[20 <./codeimg6.png>]
-<codeimg7.png, id=165, 395.4775pt x 347.2975pt>
+[17 <./codeimg6.png>]
+<codeimg7.png, id=146, 395.4775pt x 347.2975pt>
 File: codeimg7.png Graphic file (type png)
 <use codeimg7.png>
-Package pdftex.def Info: codeimg7.png  used on input line 347.
+Package pdftex.def Info: codeimg7.png  used on input line 307.
 (pdftex.def)             Requested size: 251.9989pt x 221.29985pt.
- [21 <./codeimg7.png>]
-<classes.png, id=176, 540.51938pt x 440.0189pt>
+ [18 <./codeimg7.png>]
+<classes.png, id=157, 930.47626pt x 764.8575pt>
 File: classes.png Graphic file (type png)
 <use classes.png>
-Package pdftex.def Info: classes.png  used on input line 369.
-(pdftex.def)             Requested size: 540.0pt x 439.60825pt.
+Package pdftex.def Info: classes.png  used on input line 329.
+(pdftex.def)             Requested size: 540.0pt x 443.89775pt.
 
-Overfull \hbox (97.07507pt too wide) in paragraph at lines 368--370
+Overfull \hbox (97.07507pt too wide) in paragraph at lines 328--330
  []|  [] 
  []
 
-[22 <./classes.png>] [23]
-<sequence1.png, id=188, 966.61125pt x 524.96124pt>
+[19 <./classes.png>] [20]
+<sequence1.png, id=173, 966.61125pt x 524.96124pt>
 File: sequence1.png Graphic file (type png)
 <use sequence1.png>
-Package pdftex.def Info: sequence1.png  used on input line 392.
+Package pdftex.def Info: sequence1.png  used on input line 352.
 (pdftex.def)             Requested size: 388.80066pt x 211.15828pt.
 
-Overfull \hbox (28.80066pt too wide) in paragraph at lines 392--393
+Overfull \hbox (28.80066pt too wide) in paragraph at lines 352--353
  [][] 
  []
 
-[24 <./sequence1.png>]
-<sequence2.png, id=196, 966.61125pt x 695.59875pt>
+[21 <./sequence1.png>]
+<sequence2.png, id=182, 966.61125pt x 695.59875pt>
 File: sequence2.png Graphic file (type png)
 <use sequence2.png>
-Package pdftex.def Info: sequence2.png  used on input line 405.
+Package pdftex.def Info: sequence2.png  used on input line 365.
 (pdftex.def)             Requested size: 468.0011pt x 336.78122pt.
 
-Overfull \hbox (53.52893pt too wide) in paragraph at lines 404--406
+Overfull \hbox (53.52893pt too wide) in paragraph at lines 364--366
 []  [] 
  []
 
-[25 <./sequence2.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 439.
- [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 439.
+[22 <./sequence2.png>]
+<classdiagramD8.png, id=190, 997.7275pt x 734.745pt>
+File: classdiagramD8.png Graphic file (type png)
+<use classdiagramD8.png>
+Package pdftex.def Info: classdiagramD8.png  used on input line 381.
+(pdftex.def)             Requested size: 431.9989pt x 318.13159pt.
+
+Overfull \hbox (71.9989pt too wide) in paragraph at lines 381--382
+ [][] 
+ []
+
+[23 <./classdiagramD8.png>]
+<email1.png, id=200, 776.9025pt x 618.31pt>
+File: email1.png Graphic file (type png)
+<use email1.png>
+Package pdftex.def Info: email1.png  used on input line 406.
+(pdftex.def)             Requested size: 323.9978pt x 257.85811pt.
+ [24 <./email1.png>]
+<email2.png, id=209, 952.55875pt x 442.65375pt>
+File: email2.png Graphic file (type png)
+<use email2.png>
+Package pdftex.def Info: email2.png  used on input line 413.
+(pdftex.def)             Requested size: 388.80066pt x 180.67868pt.
+
+Overfull \hbox (28.80066pt too wide) in paragraph at lines 413--414
+ [][] 
+ []
+
+<email3.png, id=210, 989.6975pt x 442.65375pt>
+File: email3.png Graphic file (type png)
+<use email3.png>
+Package pdftex.def Info: email3.png  used on input line 419.
+(pdftex.def)             Requested size: 388.80066pt x 173.89056pt.
+
+Overfull \hbox (28.80066pt too wide) in paragraph at lines 419--420
+ [][] 
+ []
+
+<client1.png, id=211, 773.89125pt x 584.1825pt>
+File: client1.png Graphic file (type png)
+<use client1.png>
+Package pdftex.def Info: client1.png  used on input line 426.
+(pdftex.def)             Requested size: 323.9978pt x 244.57054pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25 <./email2.png> <./email3.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 444.
+ [26 <./client1.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 444.
  (./as3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 439.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 439.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 444.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 444.
 Package rerunfilecheck Info: File `as3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 439.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 444.
  ) 
 Here is how much of TeX's memory you used:
- 6167 strings out of 492649
- 89114 string characters out of 6129622
- 177442 words of memory out of 5000000
- 9890 multiletter control sequences out of 15000+600000
- 12005 words of font info for 45 fonts, out of 8000000 for 9000
+ 7199 strings out of 492649
+ 108085 string characters out of 6129622
+ 199140 words of memory out of 5000000
+ 10905 multiletter control sequences out of 15000+600000
+ 11958 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,6n,25p,951b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,39p,970b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on as3.pdf (26 pages, 3345800 bytes).
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on as3.pdf (26 pages, 3333438 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 72 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
