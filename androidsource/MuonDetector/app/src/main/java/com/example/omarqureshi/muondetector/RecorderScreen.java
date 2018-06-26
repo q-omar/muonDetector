@@ -37,7 +37,7 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         super.onCreate(savedInstanceState);
 
         processor = new Processor(this);
-        processor.addObserver(this); //add this line to an observer class that wants to add itself to the observer list
+        processor.addObserver(this); //add this line to an observer class that wants to add itself to the observer list watching a subject
 
         setContentView(R.layout.activity_recorder_screen);
         setTitle("Muon Event Detector");
@@ -159,7 +159,6 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
             dateText.setVisibility(View.INVISIBLE);
             eventText.setVisibility(View.INVISIBLE);
             clearButton.setText("Summary");
-            //processor.notifyObservers(); //used for testing purposes
         } else if (!timerIsRunning){
 
             String averageString = Double.toString(processor.getEventsPerMin());
@@ -175,12 +174,12 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         }
 
     }
-    @Override
-    public void update(){ //do something with update notification, for testing purpose had it displayed amount of observers watching subject
-        //int length = processor.observersList.size();
-        //String length1 = Integer.toString(length);
 
-        //clearButton.setText("Observerlist size"+length1);
+    //add this method to an observer class
+    @Override
+    public void update(){ 
+       //do something to this class on an update from the subject
+       //possibly use processor.getState() or processor.setState() to do something with its state (processor is arbitrary subject in this case)
     }
 
     @Override

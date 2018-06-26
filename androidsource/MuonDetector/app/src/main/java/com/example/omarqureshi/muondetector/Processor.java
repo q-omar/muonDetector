@@ -7,18 +7,18 @@ import java.util.Arrays;
 import java.util.Date;
 
 public class Processor {
-	private List<Observer> observersList = new ArrayList<Observer>();//add this variable to relevant subject class
 	private FtdiDeviceAdaptor usb;
 
 	private Date startTime;
 	private Date stopTime;
 	private Date currentTime;
-
 	private boolean isRecording = false;
-
 	private int eventCount = 0;		// Number of events over a collection period
-
 	private static final int MAX_EVENTS = 1000; // might need this later
+
+	//add these two variables to a potential subject class
+	private List<Observer> observersList = new ArrayList<Observer>();//subject class holds a list of all observers watching it
+	private int state; //arbitrary variable that may change during the course of this class 
 
     public Processor(Context context) {
         usb = new FtdiDeviceAdaptor(context);
@@ -129,14 +129,26 @@ public class Processor {
 		}
 	}
 
-	public void notifyObservers(){ //add this method to relevant subject class
+
+	//add these methods to the relevant subject class
+
+	public void setState (int newState){ //set a state and because itll be changed from old state, notify observers
+		state = newState; //this method can either be used inside this class via simply setState(4) or 
+		notifyObservers(); //outside by a class who has instance of this class via processor.setState(4)
+	}
+
+	public int getState(){ //the observing classes can use this getstate() method to check this methods state
+		return state;
+	}
+
+	public void notifyObservers(){ //triggers the update method in the observer classes which might do a corresponding action
 		for (Observer observer : observersList) {
 			observer.update();
 		}
 	}
 
-	public void addObserver(Observer observer){ //add this method to relevant subject class
-		observersList.add(observer);
+	public void addObserver(Observer observer){ 
+		observersList.add(observer); //a potential observer class can call this method to add itself as an observer 
 	}
 
 }
