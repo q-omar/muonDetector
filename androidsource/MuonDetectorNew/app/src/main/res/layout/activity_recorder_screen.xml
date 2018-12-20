@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <Button
+        android:id="@+id/logButtonID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Summary"
+        app:layout_constraintDimensionRatio="w,2:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/recorderButtonID"
+        app:layout_constraintTop_toTopOf="@+id/recorderButtonID" />
+
+    <Button
+        android:id="@+id/recorderButtonID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:text="@string/record_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/settingsButtonID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/timerLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="8dp"
+        android:text="1:00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/settingsButtonID"
+        app:layout_constraintTop_toBottomOf="@+id/settingsButtonID" />
+
+    <TextView
+        android:id="@+id/datestampID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="108dp"
+        android:text=" "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/summaryLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Summary:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/datestampID"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/averageLabelID"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="31dp"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/eventsMinID" />
+
+    <TextView
+        android:id="@+id/durationLabelID"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/summaryLabelID" />
+
+    <TextView
+        android:id="@+id/eventsLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:text="Total Events: "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/eventsLabelID2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="180dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/eventsLabelID" />
+
+    <TextView
+        android:id="@+id/connectionLabelID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:text="Not Connected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/logButtonID"
+        app:layout_constraintTop_toBottomOf="@+id/logButtonID"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/eventsMinID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/events_min_label"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/durationLabelID" />
+
+    <TextView
+        android:id="@+id/eventsMinID2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/eventsMinID"
+        app:layout_constraintTop_toTopOf="@+id/eventsMinID" />
+
+    <Button
+        android:id="@+id/settingsButtonID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="@string/settings_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2:1"
+        app:layout_constraintEnd_toStartOf="@+id/recorderButtonID"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+</android.support.constraint.ConstraintLayout>

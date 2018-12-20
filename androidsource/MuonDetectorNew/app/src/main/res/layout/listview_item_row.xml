@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This file is for formatting table entries of the log screen. To add a new column
+ create a new TextView and change the layout_weight so that the columns are evenly
+ distributed. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/eventNumber"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33" />
+
+    <TextView
+        android:id="@+id/eventLocation"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33" />
+
+    <TextView
+        android:id="@+id/eventTime"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33" />
+
+</LinearLayout>
