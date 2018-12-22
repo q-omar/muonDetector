@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">MuonDetector</string>
 
+    <!-- Strings for recording screen -->
     <string name="events_min_label">Events Per Minute</string>
     <string name="total_events_label">Total Events</string>
     <string name="settings_label">Settings</string>
     <string name="record_label">Record</string>
+    <string name="location_label">Current Location:</string>
+    <string name="location_default">Click to enter</string>
 
     <string name="change_timer_length">Timer Duration</string>
     <string name="save_label">Save</string>

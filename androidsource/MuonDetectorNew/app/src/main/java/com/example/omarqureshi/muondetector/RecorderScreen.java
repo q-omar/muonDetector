@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Button;
 
@@ -27,6 +28,7 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
     private TextView durationText;
     private TextView connectionText;
     private TextView eventsMinText;
+    private EditText locationInput;
 
     private SharedPreferences sharedPrefs;
 
@@ -81,6 +83,7 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         averageText = findViewById(R.id.averageLabelID);
         durationText = findViewById(R.id.durationLabelID);
         eventsMinText = findViewById(R.id.eventsMinID2);
+        locationInput = findViewById(R.id.locationInput);
 
         boolean isConnected = processor.tryConnection();
 
@@ -178,6 +181,8 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         summaryText.setVisibility(View.INVISIBLE);
         durationText.setVisibility(View.INVISIBLE);
         averageText.setVisibility(View.INVISIBLE);
+
+        locationInput.setEnabled(false);        // Prevent user from editing location while recording
         countDownTimer = new CountDownTimer(timeRemaining, 10) {
             @Override
             public void onTick(long l ) {
@@ -201,6 +206,7 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         resetTimer();
         countDownTimer.cancel();
         countDownButton.setText("Start");
+        locationInput.setEnabled(true);        // Allow user to edit location again
         timerIsRunning = false;
         processor.switchRecording();
     }
