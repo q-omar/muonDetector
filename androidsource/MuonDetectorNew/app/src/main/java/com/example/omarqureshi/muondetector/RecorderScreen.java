@@ -6,7 +6,11 @@ import android.os.CountDownTimer;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Button;
@@ -83,7 +87,27 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         averageText = findViewById(R.id.averageLabelID);
         durationText = findViewById(R.id.durationLabelID);
         eventsMinText = findViewById(R.id.eventsMinID2);
+
         locationInput = findViewById(R.id.locationInput);
+
+        // Change user's location after they enter info
+        locationInput.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus) {
+                    updateLocation();
+                }
+            }
+        });
+        locationInput.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    updateLocation();
+                    return true;
+                }
+                return false;
+            }
+        });
 
         boolean isConnected = processor.tryConnection();
 
@@ -96,7 +120,22 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
             connectionText.setText("Not Connected");
             connectionText.setVisibility(View.VISIBLE);
         }
+    }
 
+    /**
+     * Changes the user's current location after they finish editing it.
+     */
+    private void updateLocation() {
+        Editable location = locationInput.getText();  // Get entered text
+        String locString;
+        if (location == null) {     // If user hasn't entered a location, use "Unset"
+            locString = "Unset";
+        } else {
+            locString = location.toString(); // Else use what they entered
+        }
+
+        Log.d("myTag", locString);      // Debug output location text
+        processor.setLocation(locString);
     }
 
     /**
@@ -143,13 +182,15 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
      * Opens the log screen upon a button click.
      */
     public void openLogScreen(){
-
         Intent intent = new Intent(this,LogScreen.class);
         intent.putStringArrayListExtra("MuonData", processor.getStrEventData());
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
+    /**
+     * Switches the timer on/off when the user presses the record button.
+     */
     public void startStop(){
         if (timerIsRunning){
             stopTimer();
@@ -169,7 +210,6 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         String newEventsMin = Double.toString(processor.getEventsPerMin());
         eventsMinText.setText(newEventsMin);
         eventsMinText.setVisibility(View.VISIBLE);
-
     }
 
     public void startTimer(){
@@ -200,7 +240,6 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         countDownButton.setText("Recording...");
         timerIsRunning = true;
     }
-
 
     public void stopTimer(){
         resetTimer();

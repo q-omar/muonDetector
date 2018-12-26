@@ -18,7 +18,9 @@ public class Processor {
 
 	//add these two variables to a potential subject class
 	private List<Observer> observersList = new ArrayList<Observer>();//subject class holds a list of all observers watching it
-	private int state; //arbitrary variable that may change during the course of this class 
+	private int state; //arbitrary variable that may change during the course of this class
+
+    private String location;     // User's current location; might want to store this elsewhere later?
 
     public Processor(Context context) {
         usb = new FtdiDeviceAdaptor(context);
@@ -42,6 +44,13 @@ public class Processor {
 	public int getEventCount() {
 		return eventData.size();
 	}
+
+    /**
+     * Edits the user's current location
+     */
+    public void setLocation(String loc) {
+        location = loc;
+    }
 
 	/**
 	 * Called when the user chooses to Start/Stop Recording. Saves the appropriate timestamp
@@ -125,7 +134,6 @@ public class Processor {
 		ArrayList<String> rawData = usb.readDeviceBuffer();
 		String currentTime = getCurrentTime().toString();
 		String strCurrentTime = currentTime.toString();
-		String location = "Calgary"; //TODO: Replace this placeholder.
 		for (String entry:rawData) {
 			eventData.add(new MuonEvent(eventData.size() + 1, location, currentTime, strCurrentTime + entry));
 		}
