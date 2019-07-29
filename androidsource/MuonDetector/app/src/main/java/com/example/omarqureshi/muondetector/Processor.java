@@ -151,6 +151,9 @@ public class Processor {
 		observersList.add(observer); //a potential observer class can call this method to add itself as an observer 
 	}
 
+	public boolean isConnected() {
+		return usb.getFTDIConnected();
+	}
 }
 
 

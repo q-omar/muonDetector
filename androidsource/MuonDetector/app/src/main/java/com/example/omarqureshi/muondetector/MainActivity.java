@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Cosmic Watch Communicator");
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,RecorderScreen.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
     }
 
     public void openAboutScreen(){

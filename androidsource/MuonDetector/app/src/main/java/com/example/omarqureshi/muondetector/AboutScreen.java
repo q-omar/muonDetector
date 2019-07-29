@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+/**
+ This class initiates the About Screen.
+ You can find the About Screen under res/layout/activity_about_screen.xml
+ */
 public class AboutScreen extends AppCompatActivity {
 
     @Override
