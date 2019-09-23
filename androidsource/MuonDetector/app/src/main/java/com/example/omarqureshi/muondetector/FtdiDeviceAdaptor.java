@@ -5,9 +5,16 @@ package com.example.omarqureshi.muondetector;
 import android.content.Context;
 import android.hardware.usb.UsbManager;
 import android.hardware.usb.UsbDevice;
+import android.os.Environment;
 import android.util.Log;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -19,7 +26,10 @@ import com.ftdi.j2xx.FT_Device;
  */
 public class FtdiDeviceAdaptor implements DeviceInterface {
 
+    //private FileOutputStream outStream =
+    //private FileInputStream inStream =
     private ArrayList<String> localBuffer = new ArrayList<>();
+    private Integer numBuffers = 1;
     //Associations
     private Context context;                //Needed to initialize the two associations below.
     private UsbManager managerDevice;       //Needed for detecting connected USB devices.
@@ -56,9 +66,29 @@ public class FtdiDeviceAdaptor implements DeviceInterface {
      */
     public ArrayList<String> getLocalBuffer() {
         ArrayList<String> returnData = new ArrayList<>();
+        String tempString = "";
+        String[] tempBuffer;
+
         for (String entry : localBuffer) {
-            returnData.add(new String(entry));
+            tempString += entry;
+
+            tempBuffer = tempString.split("\\r\\n|\\n");
+
+            if (tempString.endsWith("\n")) {
+                tempString = tempBuffer[tempBuffer.length - 1] + "\n";
+            }
+            else{
+                tempString = tempBuffer[tempBuffer.length - 1];
+            }
+
+            String[] secondBuffer;
+            secondBuffer = Arrays.copyOf(tempBuffer, tempBuffer.length-1);
+            for (String tempEntry:secondBuffer) {
+                returnData.add(tempEntry);
+            }
         }
+
+        returnData.add(new String(tempString));
         return returnData;
     }
 
@@ -96,7 +126,7 @@ public class FtdiDeviceAdaptor implements DeviceInterface {
         HashMap<String, UsbDevice> deviceMap = managerDevice.getDeviceList();
         String[] attachedDevices = getDeviceNames();
         try {
-            UsbDevice connectedDevice = deviceMap.get(attachedDevices[0]);
+            UsbDevice connectedDevice = deviceMap.get(attachedDevices[0]); //Assume First attached device. Few devices have multiple ports.
             D2xxManager ftdiManager = D2xxManager.getInstance(context);
             ftdiManager.addUsbDevice(connectedDevice);
             boolean isFTDI = ftdiManager.isFtDevice(connectedDevice);
@@ -156,10 +186,7 @@ public class FtdiDeviceAdaptor implements DeviceInterface {
         if ((ftdiDevice != null) && (bufferSize > 0)) {
             ftdiDevice.read(dataBuffer, bufferSize);
             String data = new String(dataBuffer);
-            String readings[] = data.split("\\r?\\n");
-            for (String reading : readings) {
-                localBuffer.add(reading);
-            }
+            localBuffer.add(data);
             return true;
         }
         return false;
@@ -174,5 +201,30 @@ public class FtdiDeviceAdaptor implements DeviceInterface {
     public Boolean getFTDIConnected() {
         return (ftdiDevice != null);
     }
+
+    public Context getContext() {
+        return this.context;
+    }
+
+    /**
+     * Not done yet, meant to bypass the too much data crash by saving to data.
+     * @throws IOException
+
+    public void () throws IOException {
+        File rootFolder = new File(Environment.getExternalStorageDirectory().toString());
+
+        String filename = "TempBuffer" + numBuffers;
+        File outputFile = new File(rootFolder, filename+".csv");
+        FileWriter writer = new FileWriter(outputFile);
+
+        for (String line:localBuffer) {
+            writer.append(line);
+        }
+
+        writer.flush();
+        writer.close();
+        numBuffers += 1;
+    }
+     */
 
 }

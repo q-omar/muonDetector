@@ -1,10 +1,16 @@
 package com.example.omarqureshi.muondetector;
 
 import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 import java.util.Date;
+//For exporting text files
+import java.io.FileWriter;
+import java.io.File;
+import android.os.Environment;
+import java.io.IOException;
 
 public class Processor {
 	private FtdiDeviceAdaptor usb;
@@ -154,6 +160,25 @@ public class Processor {
 	public boolean isConnected() {
 		return usb.getFTDIConnected();
 	}
+
+	public void exportCSV() throws IOException {
+		File rootFolder = new File(Environment.getExternalStorageDirectory().getAbsolutePath());
+
+
+		String filename = "Log of " + startTime.toString();
+		//File outputFile = new File(usb.getContext().getFilesDir(), filename + ".txt");
+		File outputFile = new File(rootFolder, filename+".csv");
+		FileWriter writer = new FileWriter(outputFile);
+
+		ArrayList<String> compiledData = usb.getLocalBuffer();
+		for (String line:compiledData) {
+			writer.append(line + "\n");
+			writer.flush();
+		}
+		writer.close();
+	}
+
+
 }
 
 

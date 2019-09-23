@@ -1,13 +1,19 @@
 package com.example.omarqureshi.muondetector;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.CountDownTimer;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Random;
@@ -41,14 +47,23 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
     private long timeRemaining = 60000;
     private boolean timerIsRunning;
     public Processor processor;
-    
+
+    /**
+     * Constants
+     */
+
+    public static final String TAG = "RecorderScreen";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Needed for interfacing with the detector
         processor = new Processor(this);
         processor.addObserver(this); //add this line to an observer class that wants to add itself to the observer list watching a subject
+        boolean isConnected = processor.tryConnection();
 
+        //Layout Elements
         setContentView(R.layout.activity_recorder_screen);
         setTitle("Muon Event Detector");
 
@@ -74,11 +89,9 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
         averageText = (TextView) findViewById(R.id.averageLabelID);
         durationText = (TextView) findViewById(R.id.durationLabelID);
         eventsMinText = (TextView) findViewById(R.id.eventsMinID2);
-
-        boolean isConnected = processor.tryConnection();
-
         connectionText = (TextView) findViewById(R.id.connectionLabelID);
 
+        //Report if it's connected to the device yet or not.
         if (isConnected) {
             connectionText.setText("Connected");
             connectionText.setVisibility(View.VISIBLE);
@@ -88,10 +101,13 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
             countDownButton.setText("Try Connecting");
         }
 
-
+        isReadStoragePermissionGranted();
+        isWriteStoragePermissionGranted();
     }
 
-
+    /**
+     * Method executed by the bottom left button, the one that handles turning on or off the recording.
+     */
     public void startStop(){
         boolean isConnected = processor.isConnected();
         updateConnection();
@@ -104,6 +120,13 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
             } else {
                 startTimer();
             }
+        }
+        try {
+            processor.exportCSV();
+        }
+        catch (IOException ex) {
+            //TextView debugText = findViewById(R.id.debugText);
+            //debugText.setText(ex.getMessage());
         }
     }
 
@@ -227,6 +250,45 @@ public class RecorderScreen extends AppCompatActivity implements Observer{
     public void finish(){
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    //Below is not our code; came from https://mobikul.com/getting-read-write-permission-external-storage-android/ .
+    public  boolean isReadStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v(TAG,"Permission is granted1");
+                return true;
+            } else {
+
+                Log.v(TAG,"Permission is revoked1");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 3);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(TAG,"Permission is granted1");
+            return true;
+        }
+    }
+
+    public  boolean isWriteStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v(TAG,"Permission is granted2");
+                return true;
+            } else {
+
+                Log.v(TAG,"Permission is revoked2");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 2);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(TAG,"Permission is granted2");
+            return true;
+        }
     }
 }
 
