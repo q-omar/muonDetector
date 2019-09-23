@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MuonDetector</string>
+
+    <string name="events_min_label">Events Per Minute</string>
+    <string name="total_events_label">Total Events</string>
+    <string name="settings_label">Settings</string>
+    <string name="record_label">Record</string>
+
+    <string name="change_timer_length">Timer Duration</string>
+    <string name="save_label">Save</string>
+    <string name="cancel_label">Cancel</string>
+
+    <!-- Strings for shared preferences  -->
+    <string name="shared_prefs">com.muondetector.sharedPrefs</string>
+    <string name="hours_key">hours</string>
+    <string name="minutes_key">minutes</string>
+    <string name="seconds_key">seconds</string>
+
+</resources>
